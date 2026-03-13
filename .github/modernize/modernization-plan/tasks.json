@@ -4,9 +4,9 @@
   "tasks": [
     {
       "type": "infrastructure",
-      "id": "001-infrastructure-bicep-aca-postgresql",
-      "description": "Generate Bicep IaC files for Azure Container Apps and Azure Database for PostgreSQL with azd integration",
-      "requirements": "Generate Bicep infrastructure-as-code files to provision Azure Container Apps environment, Azure Container App, Azure Container Registry, and Azure Database for PostgreSQL Flexible Server. Include azd integration with azure.yaml configuration. The application uses Spring Boot 3.4.0 with Java 21, connects to PostgreSQL using Azure Managed Identity (passwordless authentication via azure-identity-extensions), and exposes port 8080. The existing application-azure.properties already configures Managed Identity for PostgreSQL. Infrastructure should support environment variables: POSTGRES_HOST, POSTGRES_DATABASE, POSTGRES_USERNAME, AZURE_CLIENT_ID, and SPRING_PROFILES_ACTIVE=azure.",
+      "id": "001-infrastructure-bicep-generation",
+      "description": "Generate Bicep IaC files to provision Azure infrastructure for the Photo Album application, including Container Apps Environment, Container Registry, PostgreSQL Flexible Server, Key Vault, Managed Identity, and Log Analytics.",
+      "requirements": "Generate Bicep infrastructure-as-code files to provision all required Azure resources for deploying the Photo Album Spring Boot application. Resources include: Azure Container Apps Environment, Azure Container Registry (Basic SKU), Azure Database for PostgreSQL Flexible Server, Azure Key Vault, User-Assigned Managed Identity with AcrPull role, and Log Analytics Workspace. The PostgreSQL server should use Managed Identity for passwordless authentication via Service Connector. The Container App should use the azure Spring profile (SPRING_PROFILES_ACTIVE=azure) and expose port 8080.",
       "environmentConfiguration": null,
       "skills": [
         {
@@ -17,35 +17,33 @@
       "iacType": "bicep",
       "provision": false,
       "status": "success",
-      "taskSummary": "Generated Bicep IaC files in ./infra/ with modules for Container Apps, Container Registry, PostgreSQL Flexible Server, Key Vault, Managed Identity, and Log Analytics. Includes deploy scripts and compliance report (24/24 rules applied)."
+      "taskSummary": "Generated Bicep IaC files in ./infra/ with 7 modular templates covering Container Apps, ACR, PostgreSQL Flexible Server, Key Vault, Managed Identity, and Log Analytics. All 25 IaC rules validated. Provision was not executed (provision=false)."
     },
     {
       "type": "containerization",
-      "id": "002-containerization-aca",
-      "description": "Validate and update existing Dockerfile for Azure Container Apps deployment",
-      "requirements": "Review and update the existing Dockerfile for compatibility with Azure Container Apps. The current Dockerfile uses a multi-stage build with Maven 3.9.6 and Eclipse Temurin JDK 21 for building, and Eclipse Temurin JRE 21 for runtime. Ensure the Dockerfile follows Azure Container Apps best practices, including proper health check support and container port configuration on 8080.",
+      "id": "002-containerization",
+      "description": "Containerize the Photo Album application using the existing multi-stage Dockerfile for deployment to Azure Container Apps.",
+      "requirements": "Validate and use the existing multi-stage Dockerfile that builds with Maven 3.9.6 and Eclipse Temurin JDK 21 and runs on Eclipse Temurin JRE 21. The Dockerfile should produce a production-ready container image exposing port 8080 with health check endpoints via Spring Boot Actuator, container-aware JVM settings, and a non-root user for security.",
       "environmentConfiguration": null,
-      "dockerfilePath": "./Dockerfile",
-      "status": "success",
-      "taskSummary": "Validated and updated Dockerfile with non-root user, HEALTHCHECK instruction, container-aware JVM settings, and .dockerignore. Added spring-boot-starter-actuator dependency and configured health probe endpoints. Docker image built and verified successfully."
+      "dockerfilePath": "Dockerfile (existing)",
+      "status": "started"
     },
     {
       "type": "deployment",
-      "id": "003-deployment-aca-azd",
-      "description": "Deploy the Photo Album application to Azure Container Apps using azd",
-      "requirements": "Deploy the containerized Photo Album application to Azure Container Apps using Azure Developer CLI (azd). The deployment should use the Bicep infrastructure generated in the infrastructure task and the existing Dockerfile. The application requires PostgreSQL connectivity with Managed Identity authentication. Set SPRING_PROFILES_ACTIVE=azure to activate the Azure configuration profile.",
+      "id": "003-deployment-azure-container-apps",
+      "description": "Deploy the Photo Album application to Azure Container Apps with passwordless PostgreSQL authentication via Managed Identity.",
+      "requirements": "Deploy the containerized Photo Album application to Azure Container Apps. Build and push the container image to Azure Container Registry, then update the Container App to use the new image. Configure Service Connector for passwordless PostgreSQL Flexible Server authentication using User-Assigned Managed Identity. The application should use the azure Spring profile with health probes configured on the /actuator/health endpoint.",
       "environmentConfiguration": null,
       "targetAzureService": "Azure Container Apps",
-      "resourceStatus": "new",
-      "deploymentTool": "bicep",
-      "status": "started"
+      "resourceStatus": "Will create new resources via Bicep deployment",
+      "deploymentTool": "bicep"
     }
   ],
   "metadata": {
     "planName": "modernization-plan",
     "projectName": "Photo Album",
     "language": "java",
-    "createdAt": "2026-03-13T06:31:51.655Z",
+    "createdAt": "2026-03-13T07:32:38.183Z",
     "version": "1.0"
   }
 }
