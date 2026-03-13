@@ -1,0 +1,41 @@
+# Version control
+.git
+.gitignore
+.gitattributes
+.github
+
+# IDE and editor files
+.idea
+.vscode
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings
+
+# Build output (rebuilt inside container)
+target/
+
+# Node modules (not needed for Java build)
+node_modules/
+
+# Docker files (avoid recursive context)
+docker-compose.yml
+docker-compose*.yml
+
+# Infrastructure files
+infra/
+
+# Database init scripts (not needed in app image)
+oracle-init/
+postgres-init/
+
+# Documentation
+README.md
+LICENSE
+*.md
+
+# OS-specific files
+.DS_Store
+Thumbs.db
