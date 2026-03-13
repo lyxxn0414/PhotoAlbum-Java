@@ -10,7 +10,7 @@ The infrastructure deploys the following Azure resources:
 
 | Resource | Type | Purpose |
 |----------|------|---------|
-| **Container App** | Microsoft.App/containerApps | Hosts the Photo Album Spring Boot application |
+| **Container App** | Microsoft.App/containerApps | Hosts the Photo Album Spring Boot application (1.0 CPU, 2Gi RAM, health probes) |
 | **Container Apps Environment** | Microsoft.App/managedEnvironments | Managed hosting environment for Container Apps |
 | **Container Registry** | Microsoft.ContainerRegistry/registries | Stores Docker container images |
 | **PostgreSQL Flexible Server** | Microsoft.DBforPostgreSQL/flexibleServers | Managed PostgreSQL database |
@@ -96,9 +96,19 @@ az containerapp update \
 
 ## Authentication
 
-- **Container Registry**: Container App uses User-Assigned Managed Identity with AcrPull role
+- **Container Registry**: Container App uses User-Assigned Managed Identity with AcrPull role (scoped to ACR)
 - **PostgreSQL**: Passwordless authentication via Azure Managed Identity using Service Connector
 - **Key Vault**: RBAC-based access with Key Vault Secrets Officer role assigned to Managed Identity
+
+## Health Probes
+
+The Container App is configured with health probes for the Spring Boot Actuator endpoints:
+
+| Probe Type | Path | Initial Delay | Period |
+|------------|------|---------------|--------|
+| **Startup** | `/actuator/health` | 10s | 10s |
+| **Liveness** | `/actuator/health/liveness` | 30s | 30s |
+| **Readiness** | `/actuator/health/readiness` | 15s | 10s |
 
 ## Resource Naming Convention
 

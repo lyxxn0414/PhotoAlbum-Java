@@ -6,7 +6,7 @@ This document verifies compliance with all mandatory IaC rules for the Photo Alb
 
 | # | Rule | Status | Implementation |
 |---|------|--------|----------------|
-| 1 | Called `appmod-get-available-region-sku` to get available regions and SKUs | ✅ Applied | Region `swedencentral` selected from available regions with sufficient quota |
+| 1 | Called `appmod-get-available-region-sku` to get available regions and SKUs | ✅ Applied | Region `swedencentral` selected — confirmed available with 19 cores remaining quota for PostgreSQL |
 | 2 | Resource naming format: `az{resourcePrefix}{resourceToken}` | ✅ Applied | All resources use `az{prefix}{uniqueString(...)}` naming |
 | 3 | Resource token uses `uniqueString(subscription().id, resourceGroup().id, location, environmentName)` | ✅ Applied | Defined in `main.bicep` variables section |
 | 4 | Resource prefix ≤ 3 characters, alphanumeric only | ✅ Applied | Prefixes: log, id, cr, kv, pg, ce, ca |
@@ -23,13 +23,14 @@ This document verifies compliance with all mandatory IaC rules for the Photo Alb
 | # | Rule | Status | Implementation |
 |---|------|--------|----------------|
 | 1 | Attach User-Assigned Managed Identity | ✅ Applied | Container App uses `identity.type: 'UserAssigned'` with managed identity |
-| 2 | AcrPull role assignment (7f951dda-...) to user-assigned managed identity | ✅ Applied | Role assignment defined in `main.bicep` before Container App |
-| 3 | AcrPull role assignment defined BEFORE any container apps | ✅ Applied | Container App has `dependsOn: [acrPullRoleAssignment]` |
+| 2 | AcrPull role assignment (7f951dda-...) to user-assigned managed identity | ✅ Applied | Role assignment defined in `container-registry.bicep` scoped to the ACR resource (least-privilege) |
+| 3 | AcrPull role assignment defined BEFORE any container apps | ✅ Applied | Container App depends on `containerRegistry` module which includes the role assignment |
 | 4 | Use user-assigned identity (NOT system) for container registry | ✅ Applied | Registry config uses `identity: managedIdentityId` |
 | 5 | Container Apps use base image `mcr.microsoft.com/azuredocs/containerapps-helloworld:latest` | ✅ Applied | Set as default in `container-app.bicep` and `main.bicep` |
 | 6 | Use `properties.configuration.registries` for ACR connection | ✅ Applied | Registry configured in container app module |
 | 7 | Enable CORS via `properties.configuration.ingress.corsPolicy` | ✅ Applied | CORS policy with wildcard origins, methods, and headers |
 | 8 | Container App Environment connected to Log Analytics Workspace | ✅ Applied | Uses `logAnalyticsConfiguration` with customerId and sharedKey |
+| 9 | Key Vault secrets and role assignments in explicit dependencies | ✅ Applied | Container App has `dependsOn: [keyVault]` ensuring KV role assignments complete first |
 
 ## PostgreSQL Rules
 
@@ -58,13 +59,23 @@ This document verifies compliance with all mandatory IaC rules for the Photo Alb
 | # | Rule | Status | Implementation |
 |---|------|--------|----------------|
 | 1 | Admin user disabled | ✅ Applied | `adminUserEnabled: false` |
-| 2 | AcrPull role for managed identity | ✅ Applied | Role assignment in `main.bicep` |
+| 2 | AcrPull role for managed identity scoped to ACR | ✅ Applied | Role assignment in `container-registry.bicep` with `scope: containerRegistry` |
+
+## Enhancements Applied
+
+| # | Enhancement | Description |
+|---|-------------|-------------|
+| 1 | AcrPull scoped to ACR | Moved AcrPull role assignment from resource group scope into `container-registry.bicep` with `scope: containerRegistry` for least-privilege |
+| 2 | Health probes | Added Liveness (`/actuator/health/liveness`), Readiness (`/actuator/health/readiness`), and Startup (`/actuator/health`) probes to Container App |
+| 3 | Java resources | Increased container resources from 0.5 CPU / 1Gi to 1.0 CPU / 2Gi for Spring Boot JVM workload |
+| 4 | Cleanup | Removed compiled `main.json` ARM template from infra directory |
 
 ## Summary
 
-- **Total rules evaluated**: 24
-- **Rules applied**: 24 ✅
+- **Total rules evaluated**: 25
+- **Rules applied**: 25 ✅
 - **Rules skipped**: 0
 - **Rules not applicable**: 0
+- **Enhancements applied**: 4
 
 All mandatory IaC rules have been implemented as specified.

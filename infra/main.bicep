@@ -62,23 +62,11 @@ module containerRegistry 'modules/container-registry.bicep' = {
     location: location
     tags: tags
     sku: 'Basic'
+    managedIdentityPrincipalId: managedIdentity.outputs.principalId
   }
 }
 
-// 4. AcrPull Role Assignment - MUST be defined BEFORE any container apps
-resource acrPullRoleAssignment 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
-  name: guid(resourceGroup().id, 'acrpull', resourceToken)
-  properties: {
-    principalId: managedIdentity.outputs.principalId
-    roleDefinitionId: subscriptionResourceId('Microsoft.Authorization/roleDefinitions', '7f951dda-4ed3-4680-a7ca-43fe172d538d')
-    principalType: 'ServicePrincipal'
-  }
-  dependsOn: [
-    containerRegistry
-  ]
-}
-
-// 5. Key Vault
+// 4. Key Vault
 module keyVault 'modules/key-vault.bicep' = {
   name: 'keyVault'
   params: {
@@ -91,7 +79,7 @@ module keyVault 'modules/key-vault.bicep' = {
   }
 }
 
-// 6. Azure Database for PostgreSQL Flexible Server
+// 5. Azure Database for PostgreSQL Flexible Server
 module postgresql 'modules/postgresql.bicep' = {
   name: 'postgresql'
   params: {
@@ -108,7 +96,7 @@ module postgresql 'modules/postgresql.bicep' = {
   }
 }
 
-// 7. Container Apps Environment
+// 6. Container Apps Environment
 module containerAppEnvironment 'modules/container-app-environment.bicep' = {
   name: 'containerAppEnvironment'
   params: {
@@ -120,7 +108,7 @@ module containerAppEnvironment 'modules/container-app-environment.bicep' = {
   }
 }
 
-// 8. Container App (depends on AcrPull role assignment)
+// 7. Container App (depends on AcrPull role assignment via containerRegistry module)
 module containerApp 'modules/container-app.bicep' = {
   name: 'containerApp'
   params: {
@@ -140,7 +128,6 @@ module containerApp 'modules/container-app.bicep' = {
     ]
   }
   dependsOn: [
-    acrPullRoleAssignment
     keyVault
   ]
 }

@@ -74,10 +74,48 @@ resource containerApp 'Microsoft.App/containerApps@2024-03-01' = {
           name: 'photoalbum'
           image: containerImage
           resources: {
-            cpu: json('0.5')
-            memory: '1Gi'
+            cpu: json('1.0')
+            memory: '2Gi'
           }
           env: envVars
+          probes: [
+            {
+              type: 'Liveness'
+              httpGet: {
+                path: '/actuator/health/liveness'
+                port: targetPort
+                scheme: 'HTTP'
+              }
+              initialDelaySeconds: 30
+              periodSeconds: 30
+              timeoutSeconds: 5
+              failureThreshold: 3
+            }
+            {
+              type: 'Readiness'
+              httpGet: {
+                path: '/actuator/health/readiness'
+                port: targetPort
+                scheme: 'HTTP'
+              }
+              initialDelaySeconds: 15
+              periodSeconds: 10
+              timeoutSeconds: 5
+              failureThreshold: 3
+            }
+            {
+              type: 'Startup'
+              httpGet: {
+                path: '/actuator/health'
+                port: targetPort
+                scheme: 'HTTP'
+              }
+              initialDelaySeconds: 10
+              periodSeconds: 10
+              timeoutSeconds: 5
+              failureThreshold: 10
+            }
+          ]
         }
       ]
       scale: {

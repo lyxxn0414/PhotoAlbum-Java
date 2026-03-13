@@ -15,6 +15,9 @@ param tags object = {}
 ])
 param sku string = 'Basic'
 
+@description('Principal ID of the managed identity to grant AcrPull role')
+param managedIdentityPrincipalId string
+
 resource containerRegistry 'Microsoft.ContainerRegistry/registries@2023-11-01-preview' = {
   name: name
   location: location
@@ -24,6 +27,17 @@ resource containerRegistry 'Microsoft.ContainerRegistry/registries@2023-11-01-pr
   }
   properties: {
     adminUserEnabled: false
+  }
+}
+
+// AcrPull role assignment scoped to the container registry (least-privilege)
+resource acrPullRoleAssignment 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
+  name: guid(containerRegistry.id, managedIdentityPrincipalId, '7f951dda-4ed3-4680-a7ca-43fe172d538d')
+  scope: containerRegistry
+  properties: {
+    principalId: managedIdentityPrincipalId
+    roleDefinitionId: subscriptionResourceId('Microsoft.Authorization/roleDefinitions', '7f951dda-4ed3-4680-a7ca-43fe172d538d')
+    principalType: 'ServicePrincipal'
   }
 }
 
