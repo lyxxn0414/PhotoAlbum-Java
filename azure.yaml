@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/refs/heads/main/schemas/v1.0/azure.yaml.json
+
+name: PhotoAlbum-Java
+metadata:
+  template: PhotoAlbum-Java@0.0.1-beta
+
+services:
+  photoalbum-java-app:
+    project: .           # root directory contains pom.xml + Dockerfile
+    language: java
+    host: containerapp
+    docker:
+      path: ./Dockerfile   # relative to project path
+      context: .           # docker build context = project root
+
+hooks:
+  postprovision:
+    shell: sh
+    run: ./infra/hooks/postprovision.sh
+    continueOnError: false

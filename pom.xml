@@ -95,6 +95,13 @@
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
+
+        <!-- Azure Identity Extensions for PostgreSQL passwordless authentication (Managed Identity) -->
+        <dependency>
+            <groupId>com.azure</groupId>
+            <artifactId>azure-identity-extensions</artifactId>
+            <version>1.2.0</version>
+        </dependency>
     </dependencies>
 
     <build>
