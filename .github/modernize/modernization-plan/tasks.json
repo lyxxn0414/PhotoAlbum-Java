@@ -26,7 +26,8 @@
       "requirements": "Validate and use the existing multi-stage Dockerfile that builds with Maven 3.9.6 and Eclipse Temurin JDK 21 and runs on Eclipse Temurin JRE 21. The Dockerfile should produce a production-ready container image exposing port 8080 with health check endpoints via Spring Boot Actuator, container-aware JVM settings, and a non-root user for security.",
       "environmentConfiguration": null,
       "dockerfilePath": "Dockerfile (existing)",
-      "status": "started"
+      "status": "success",
+      "taskSummary": "Validated existing multi-stage Dockerfile. The Dockerfile uses Maven 3.9.6 with Eclipse Temurin JDK 21 for the build stage and Eclipse Temurin JRE 21 for the runtime stage. It includes production-ready features: non-root user (appuser), container-aware JVM settings (UseContainerSupport, MaxRAMPercentage, G1GC), health check via /actuator/health/liveness, curl for health probes, and exposes port 8080. The Dockerfile is ready for Azure Container Apps deployment."
     },
     {
       "type": "deployment",
@@ -36,7 +37,8 @@
       "environmentConfiguration": null,
       "targetAzureService": "Azure Container Apps",
       "resourceStatus": "Will create new resources via Bicep deployment",
-      "deploymentTool": "bicep"
+      "deploymentTool": "bicep",
+      "status": "started"
     }
   ],
   "metadata": {
