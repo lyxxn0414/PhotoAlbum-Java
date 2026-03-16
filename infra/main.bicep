@@ -128,7 +128,7 @@ resource postgresDatabase 'Microsoft.DBforPostgreSQL/flexibleServers/databases@2
   name: postgresDatabaseName
   properties: {
     charset: 'UTF8'
-    collation: 'en_US.UTF8'
+    collation: 'en_US.utf8'
   }
 }
 
