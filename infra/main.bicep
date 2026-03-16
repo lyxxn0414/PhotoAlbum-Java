@@ -7,8 +7,8 @@ param appName string = 'photoalbum'
 @description('Environment tag (dev, staging, prod)')
 param environment string = 'prod'
 
-@description('Container image to deploy')
-param containerImage string = '${acrName}.azurecr.io/photoalbum:latest'
+@description('Container image to deploy (e.g. <acr-login-server>/photoalbum:latest). Defaults to a placeholder; override this after ACR is provisioned.')
+param containerImage string = 'mcr.microsoft.com/azuredocs/containerapps-helloworld:latest'
 
 @description('PostgreSQL admin username')
 param postgresAdminUser string = 'photoalbumadmin'
