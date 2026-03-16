@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Tasks template for modernization plan. Generate this file alongside plan.md to track individual migration tasks.",
+  "tasks": [
+    {
+      "type": "upgrade",
+      "id": "001-upgrade-spring-boot-3",
+      "description": "Upgrade Spring Boot to 3.x to bring the application to a modern, supported runtime",
+      "requirements": "Upgrade from Spring Boot 2.7.18 to Spring Boot 3.x. This upgrade includes migrating from JDK 8 to JDK 17, upgrading Spring Framework from 5.x to 6.x, and migrating all javax.* namespace imports (javax.persistence, javax.validation) to Jakarta EE (jakarta.*). Oracle-specific native SQL queries in PhotoRepository must remain functional. Update Maven compiler settings from Java 8 to Java 17.",
+      "environmentConfiguration": null,
+      "status": "started",
+      "taskSummary": "",
+      "skills": [],
+      "successCriteria": {
+        "passBuild": "true",
+        "generateNewUnitTests": "false",
+        "generateNewIntegrationTests": "false",
+        "passUnitTests": "true",
+        "passIntegrationTests": "false",
+        "securityComplianceCheck": "false"
+      }
+    },
+    {
+      "type": "containerization",
+      "id": "002-containerization-update-dockerfile",
+      "description": "Update the existing Dockerfile to use Java 17+ base images after the Spring Boot 3.x upgrade",
+      "requirements": "Update the existing Dockerfile from OpenJDK 8 (maven:3.9.6-eclipse-temurin-8 and eclipse-temurin:8-jre) to Java 17+ base images. Ensure the multi-stage build continues to work correctly with the upgraded application. Update docker-compose.yml if needed.",
+      "environmentConfiguration": null,
+      "status": null,
+      "taskSummary": "",
+      "dockerfilePath": "Dockerfile"
+    },
+    {
+      "type": "deployment",
+      "id": "003-deployment-azure-container-apps",
+      "description": "Deploy the containerized PhotoAlbum application to Azure Container Apps",
+      "requirements": "Deploy the PhotoAlbum application to Azure Container Apps. Create the necessary Azure resources including a Container Apps Environment and Container App. Configure the application with appropriate resource limits and ingress settings for the web application running on port 8080.",
+      "environmentConfiguration": null,
+      "status": null,
+      "taskSummary": "",
+      "targetAzureService": "Azure Container Apps",
+      "resourceStatus": "will create new service",
+      "deploymentTool": "bicep"
+    }
+  ],
+  "metadata": {
+    "planName": "modernization-plan",
+    "projectName": "PhotoAlbum-Java",
+    "language": "java",
+    "createdAt": "2026-03-16T07:06:39.440Z",
+    "version": "1.0"
+  }
+}
