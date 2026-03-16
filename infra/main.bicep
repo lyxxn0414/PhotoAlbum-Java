@@ -106,6 +106,10 @@ resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2023-06-01-pr
       geoRedundantBackup: 'Disabled'
     }
     network: {
+      // Public network access is enabled to allow Azure Container Apps to connect.
+      // Azure services (0.0.0.0 → 0.0.0.0 firewall rule) are allowed; all other
+      // public IPs are blocked by the firewall. For production hardening, consider
+      // enabling VNet integration and switching publicNetworkAccess to 'Disabled'.
       publicNetworkAccess: 'Enabled'
     }
     highAvailability: {

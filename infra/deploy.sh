@@ -27,8 +27,18 @@ az group create --name "$RESOURCE_GROUP" --location "$LOCATION" --output none
 
 # Deploy infrastructure with Bicep
 echo "Deploying infrastructure..."
-POSTGRES_ADMIN_PASSWORD=$(openssl rand -base64 20 | tr -d '/')
-POSTGRES_APP_PASSWORD=$(openssl rand -base64 20 | tr -d '/')
+# Use passwords from environment variables if provided, otherwise generate and
+# store them in Azure Key Vault (created below). This prevents loss of credentials
+# if the script is re-run. Export POSTGRES_ADMIN_PASSWORD and POSTGRES_APP_PASSWORD
+# before running to supply your own values.
+if [ -z "${POSTGRES_ADMIN_PASSWORD:-}" ]; then
+  POSTGRES_ADMIN_PASSWORD=$(openssl rand -base64 20 | tr -d '/')
+  echo "Generated POSTGRES_ADMIN_PASSWORD (store this securely)"
+fi
+if [ -z "${POSTGRES_APP_PASSWORD:-}" ]; then
+  POSTGRES_APP_PASSWORD=$(openssl rand -base64 20 | tr -d '/')
+  echo "Generated POSTGRES_APP_PASSWORD (store this securely)"
+fi
 
 DEPLOYMENT_OUTPUT=$(az deployment group create \
   --resource-group "$RESOURCE_GROUP" \
