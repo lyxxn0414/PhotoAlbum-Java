@@ -1,0 +1,22 @@
+2026-03-17T03:39:52.653Z [INFO] [BaseBuildTool] Firing config modified event for mvn, sleeping for 5 seconds
+2026-03-17T03:39:52.655Z [INFO] [Environment] Running command (Java 8): mvn --version
+Apache Maven 3.9.6 (bc0240f3c744dd6b6ec2920b3cd08dcc295161ae)
+Maven home: C:\Program Files\Apache\apache-maven-3.9.6
+Java version: 1.8.0_482, vendor: Temurin, runtime: C:\Users\yueli6\.jdk\jdk-8\jre
+Default locale: zh_CN, platform encoding: GBK
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+2026-03-17T03:39:53.003Z [INFO] [BaseBuildTool] New version of mvn: 3.9.6 -> 3.9.6
+2026-03-17T03:39:53.006Z [INFO] [MavenBuildTool] Getting Java version of C:\Users\yueli6\Desktop\PhotoAlbum-Java from pom.xml
+2026-03-17T03:39:53.007Z [INFO] [MavenBuildTool] Searching for pom.xml files in C:\Users\yueli6\Desktop\PhotoAlbum-Java
+2026-03-17T03:39:53.007Z [INFO] [MavenBuildTool] Found pom.xml files: C:\Users\yueli6\Desktop\PhotoAlbum-Java\pom.xml
+2026-03-17T03:39:53.009Z [INFO] [MavenBuildTool] Java version found in C:\Users\yueli6\Desktop\PhotoAlbum-Java\pom.xml: 17
+2026-03-17T03:39:53.010Z [INFO] [BaseBuildTool] Notifying Java version/Config change: '17' || '21'
+2026-03-17T03:39:53.013Z [INFO] [MavenBuildTool] Getting build errors of C:\Users\yueli6\Desktop\PhotoAlbum-Java using Maven
+2026-03-17T03:39:53.014Z [INFO] [Environment] Running command (Java 17): mvn clean test-compile -q -B -fn
+2026-03-17T03:39:58.310Z [INFO] [MavenBuildTool] parsing compilation errors.
+2026-03-17T03:39:58.311Z [INFO] [BaseBuildTool] Found 1 modules: .
+2026-03-17T03:39:58.322Z [INFO] [BaseBuildTool] Finish counting Java and class files
+2026-03-17T03:39:58.322Z [INFO] [MavenBuildTool] Cleaning C:\Users\yueli6\Desktop\PhotoAlbum-Java using Maven
+2026-03-17T03:39:58.323Z [INFO] [Environment] Running command (Java 17): mvn clean -q -B -fn
+2026-03-17T03:40:00.114Z [INFO] Build succeeded! There are no build errors in the project.
+2026-03-17T03:40:00.121Z [INFO] Build project completed. Looking for next task...

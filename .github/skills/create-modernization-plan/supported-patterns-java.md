@@ -15,15 +15,21 @@ Each of the item is written in the following format: `- **skill-name**: skill-de
 
 - **infrastructure-bicep-generation**: Generate Bicep IaC files for Azure infrastructure provisioning
 - **infrastructure-terraform-generation**: Generate Terraform IaC files for Azure infrastructure provisioning
-- **migrate-cache-related-code-to-redis**: Require knowledge about migrating cache related code to use Redis, and potentially to Azure Cache for Redis with the best practices. Use when users want to migrate their cache related code to use Redis, such as Apache Commons JCS, DynaCache, Embedded cache, JCache, OSCache, ShiftOne, Oracle Coherence, etc., or local Redis to Azure Cache for Redis with authentication changes.
 - **migration-activemq-servicebus**: Migrate from ActiveMQ Artemis to Azure Service Bus for messaging.
 - **migration-amqp-rabbitmq-servicebus**: Migrate from RabbitMQ with AMQP to Azure Service Bus for messaging.
 - **migration-ant-project-to-maven-project**: Migrate current project from Ant project to Maven project
+- **migration-apache-commons-jcs-to-azure-cache-for-redis**: Migrate from Apache Commons JCS in-process cache to Azure Cache for Redis.
 - **migration-deprecated-api-upgrade**: Upgrade deprecated APIs to their recommended alternatives for improved security, performance, and compatibility.
+- **migration-dynacache-to-azure-cache-for-redis**: Migrate from DynaCache to Azure Cache for Redis.
 - **migration-eclipse-project-to-maven-project**: Migrate current project from eclipse project to maven project
+- **migration-embedded-cache-to-azure-cache-for-redis**: Migrate from embedded cache to Azure Cache for Redis for a scalable, managed solution that easily integrates with other Azure services.
 - **migration-java-ee-amqp-rabbitmq-servicebus**: Migrate from RabbitMQ with AMQP to Azure Service Bus for messaging in Java EE/Jakarta EE applications.
 - **migration-jax-rpc-to-jax-ws**: Migrate from JAX-RPC to JAX-WS for web services. JAX-RPC is deprecated and JAX-WS is the recommended alternative.
+- **migration-jboss-cache-to-azure-cache-for-redis**: Migrate from JBoss Cache to Azure Cache for Redis.
+- **migration-jcache-to-azure-cache-for-redis**: Migrate from JCache (JSR-107) to Azure Cache for Redis for a scalable, managed solution that easily integrates with other Azure services.
 - **migration-kafka-to-eventhubs**: Migrate from Kafka to Azure Event Hubs for Apache Kafka with managed identity for secure, credential-free authentication.
+- **migration-local-redis-to-azure-redis-cache**: Migrate from a local Redis instance to Azure Cache for Redis.
+- **migration-memcached-to-azure-cache-for-redis**: Migrate from Memcached distributed cache to Azure Cache for Redis.
 - **migration-mi-azuresql-azure-sdk-21v-china**: Migrate from SQL Database to Azure SQL Database with Azure SDK and managed identity in Mooncake for secure, credential-free authentication.
 - **migration-mi-azuresql-azure-sdk-public-cloud**: Migrate from SQL Database to Azure SQL Database with Azure SDK and managed identity for secure, credential-free authentication.
 - **migration-mi-mariadb-azure-sdk-public-cloud**: Migrate from MariaDB to Azure Database for MariaDB with managed identity for secure, credential-free authentication.
@@ -33,7 +39,11 @@ Each of the item is written in the following format: `- **skill-name**: skill-de
 - **migration-mi-postgresql-azure-sdk-21v-china**: Migrate from PostgreSQL to Azure Database for PostgreSQL with Azure SDK and managed identity in the Mooncake cloud for secure, credential-free authentication.
 - **migration-mi-postgresql-azure-sdk-public-cloud**: Migrate from PostgreSQL to Azure Database for PostgreSQL with Azure SDK and managed identity for secure, credential-free authentication.
 - **migration-on-premises-user-authentication-to-microsoft-entra-id**: Migrate the user authentication to Microsoft Entra ID authentication
+- **migration-oracle-coherence-to-azure-cache-for-redis**: Migrate from Oracle Coherence distributed cache to Azure Cache for Redis.
 - **migration-oracle-to-postgresql**: Migrate from Oracle DB to PostgreSQL
+- **migration-oscache-to-azure-cache-for-redis**: Migrate from OSCache in-process cache to Azure Cache for Redis.
+- **migration-shift-one-to-azure-cache-for-redis**: Migrate from ShiftOne in-process cache to Azure Cache for Redis.
+- **migration-spring-cache-backends-to-spring-cache-with-azure-cache-for-redis**: Migrate from Spring Cache to Azure Cache for Redis for a scalable, managed solution that easily integrates with other Azure services.
 - **migration-spring-jms-rabbitmq-servicebus**: Migrate from RabbitMQ with JMS to Azure Service Bus for a managed messaging service with JMS API support.
 
 ### Task Patterns without Skill Definitions

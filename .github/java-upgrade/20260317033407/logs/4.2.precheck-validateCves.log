@@ -1,0 +1,35 @@
+2026-03-17T03:35:41.235Z [INFO] getting CVEs for dependencies:
+ - org.springframework.boot:spring-boot-starter-web:2.7.18
+  - org.springframework.boot:spring-boot-starter-thymeleaf:2.7.18
+  - org.springframework.boot:spring-boot-starter-data-jpa:2.7.18
+  - com.oracle.database.jdbc:ojdbc8:21.5.0.0
+  - org.springframework.boot:spring-boot-starter-validation:2.7.18
+  - commons-io:commons-io:2.11.0
+  - org.springframework.boot:spring-boot-starter-json:2.7.18
+  - org.springframework.boot:spring-boot-starter-test:2.7.18
+  - com.h2database:h2:2.1.214
+  - org.springframework.boot:spring-boot-devtools:2.7.18
+  - java:*:8...
+2026-03-17T03:35:41.237Z [INFO] getting gitHub access token...
+2026-03-17T03:35:41.238Z [ERROR] Failed to get GitHub access token to validate CVEs for the given dependencies.
+2026-03-17T03:35:41.239Z [INFO] Processing batch 1/1, size: 11
+2026-03-17T03:35:41.241Z [INFO] listing CVEs from GitHub for dependencies [
+  "org.springframework.boot:spring-boot-starter-web:2.7.18",
+  "org.springframework.boot:spring-boot-starter-thymeleaf:2.7.18",
+  "org.springframework.boot:spring-boot-starter-data-jpa:2.7.18",
+  "com.oracle.database.jdbc:ojdbc8:21.5.0.0",
+  "org.springframework.boot:spring-boot-starter-validation:2.7.18",
+  "commons-io:commons-io:2.11.0",
+  "org.springframework.boot:spring-boot-starter-json:2.7.18",
+  "org.springframework.boot:spring-boot-starter-test:2.7.18",
+  "com.h2database:h2:2.1.214",
+  "org.springframework.boot:spring-boot-devtools:2.7.18",
+  "java:*:8"
+]
+2026-03-17T03:35:42.164Z [INFO] Fetched 2 total advisories across all pages
+2026-03-17T03:35:42.165Z [INFO] grouping CVEs and finding max patched version by dep...
+2026-03-17T03:35:42.166Z [INFO] done getting 2 CVEs for 11 dependencies
+2026-03-17T03:35:42.166Z [INFO] calculating patched version by dep...
+2026-03-17T03:35:42.167Z [INFO] CVE CVE-2024-47554 for commons-io:commons-io:2.11.0: patched version 2.14.0
+2026-03-17T03:35:42.168Z [INFO] CVE CVE-2022-45868 for com.h2database:h2:2.1.214: patched version 2.2.220
+2026-03-17T03:35:42.169Z [INFO] finished getting CVEs for dependencies.

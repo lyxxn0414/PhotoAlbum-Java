@@ -1,0 +1,39 @@
+2026-03-17T03:40:19.724Z [INFO] [Task.commitChanges](6.1): Committing changes for C:\Users\yueli6\Desktop\PhotoAlbum-Java with message: Milestone 2: Upgrade Spring Boot 3.3.13 to 3.4.4
+2026-03-17T03:40:19.920Z [INFO] [main 5eb7e3a] Milestone 2: Upgrade Spring Boot 3.3.13 to 3.4.4
+ Committer: Yue Li <yueli6@microsoft.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 10 files changed, 1 insertion(+), 781 deletions(-)
+ delete mode 100644 target/classes/application-docker.properties
+ delete mode 100644 target/classes/application.properties
+ delete mode 100644 target/classes/static/css/site.css
+ delete mode 100644 target/classes/static/js/upload.js
+ delete mode 100644 target/classes/static/uploads/5c62a4c2-d4eb-446f-9cd2-7ab8898cf371.jpg
+ delete mode 100644 target/classes/templates/detail.html
+ delete mode 100644 target/classes/templates/index.html
+ delete mode 100644 target/classes/templates/layout.html
+ delete mode 100644 target/test-classes/application-test.properties
+
+2026-03-17T03:40:19.974Z [INFO] 5eb7e3abb2de37399975186fe4081fc5537b94d7
+
+2026-03-17T03:40:20.043Z [INFO] 1	1	pom.xml
+0	34	target/classes/application-docker.properties
+0	32	target/classes/application.properties
+0	148	target/classes/static/css/site.css
+0	221	target/classes/static/js/upload.js
+-	-	target/classes/static/uploads/5c62a4c2-d4eb-446f-9cd2-7ab8898cf371.jpg
+0	149	target/classes/templates/detail.html
+0	127	target/classes/templates/index.html
+0	50	target/classes/templates/layout.html
+0	19	target/test-classes/application-test.properties
+
+2026-03-17T03:40:20.058Z [INFO] [Task.commitChanges](6.1): Committed changes for C:\Users\yueli6\Desktop\PhotoAlbum-Java with message: Milestone 2: Upgrade Spring Boot 3.3.13 to 3.4.4

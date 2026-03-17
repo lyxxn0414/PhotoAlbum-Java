@@ -1,0 +1,530 @@
+2026-03-17T03:35:17.998Z [INFO] validate plan and setup env from plan.md file...
+2026-03-17T03:35:18.000Z [INFO] Project C:\Users\yueli6\Desktop\PhotoAlbum-Java is a maven project, try to get java version from pom.xml
+2026-03-17T03:35:18.002Z [INFO] Project java version: 8
+2026-03-17T03:35:18.002Z [INFO] Build tool type: mvn
+2026-03-17T03:35:18.003Z [INFO] [Environment] Running command (Java 8): java -version
+openjdk version "1.8.0_482"
+OpenJDK Runtime Environment (Temurin)(build 1.8.0_482-b08)
+OpenJDK 64-Bit Server VM (Temurin)(build 25.482-b08, mixed mode)
+2026-03-17T03:35:18.099Z [INFO] [JdkEnvironment] Got real Java version: 1.8.0_482
+2026-03-17T03:35:18.101Z [INFO] JDK: {
+  "name": "java",
+  "path": "C:\\Users\\yueli6\\.jdk\\jdk-8\\bin",
+  "version": "8"
+}
+2026-03-17T03:35:18.109Z [INFO] [Environment] Running command (Java 8): mvn --version
+Apache Maven 3.9.6 (bc0240f3c744dd6b6ec2920b3cd08dcc295161ae)
+Maven home: C:\Program Files\Apache\apache-maven-3.9.6
+Java version: 1.8.0_482, vendor: Temurin, runtime: C:\Users\yueli6\.jdk\jdk-8\jre
+Default locale: zh_CN, platform encoding: GBK
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+2026-03-17T03:35:18.504Z [INFO] Real build tool version: 3.9.6
+2026-03-17T03:35:18.505Z [INFO] Build tool: {
+  "name": "mvn",
+  "path": "C:\\Program Files\\Apache\\apache-maven-3.9.6\\bin",
+  "version": "3.9.6"
+}
+2026-03-17T03:35:18.506Z [INFO] Project config: {
+  "name": "PhotoAlbum-Java",
+  "dir": "C:\\Users\\yueli6\\Desktop\\PhotoAlbum-Java",
+  "buildTool": {
+    "name": "mvn",
+    "path": "C:\\Program Files\\Apache\\apache-maven-3.9.6\\bin",
+    "version": "3.9.6"
+  },
+  "jdk": {
+    "name": "java",
+    "path": "C:\\Users\\yueli6\\.jdk\\jdk-8\\bin",
+    "version": "8"
+  }
+}
+2026-03-17T03:35:18.508Z [INFO] [Project PhotoAlbum-Java]: getting Java version.
+2026-03-17T03:35:18.508Z [INFO] [Project PhotoAlbum-Java]: reset Java version promise.
+2026-03-17T03:35:18.509Z [INFO] [MavenBuildTool] Getting Java version of C:\Users\yueli6\Desktop\PhotoAlbum-Java from pom.xml
+2026-03-17T03:35:18.510Z [INFO] [MavenBuildTool] Searching for pom.xml files in C:\Users\yueli6\Desktop\PhotoAlbum-Java
+2026-03-17T03:35:18.511Z [INFO] [MavenBuildTool] Getting all module coordinates of C:\Users\yueli6\Desktop\PhotoAlbum-Java
+2026-03-17T03:35:18.512Z [INFO] [MavenBuildTool] Getting effective POMs of C:\Users\yueli6\Desktop\PhotoAlbum-Java
+2026-03-17T03:35:18.519Z [INFO] [Environment] Running command (Java 8): mvn help:effective-pom -Doutput=effective-pom-af03ee17-5a65-4334-84b8-2f4f3f1bd953.log
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.photoalbum:photo-album >---------------------
+[INFO] Building Photo Album 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- help:3.2.0:effective-pom (default-cli) @ photo-album ---
+[INFO] Effective-POM written to: C:\Users\yueli6\Desktop\PhotoAlbum-Java\effective-pom-af03ee17-5a65-4334-84b8-2f4f3f1bd953.log
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.182 s
+[INFO] Finished at: 2026-03-17T11:35:22+08:00
+[INFO] ------------------------------------------------------------------------
+2026-03-17T03:35:22.584Z [INFO] [MavenBuildTool] Found pom.xml files: C:\Users\yueli6\Desktop\PhotoAlbum-Java\pom.xml
+2026-03-17T03:35:22.586Z [INFO] [MavenBuildTool] Java version found in C:\Users\yueli6\Desktop\PhotoAlbum-Java\pom.xml: 8
+2026-03-17T03:35:22.587Z [INFO] [Project PhotoAlbum-Java]: got Java version: 8
+2026-03-17T03:35:22.588Z [INFO] Source Java version: 8
+2026-03-17T03:35:22.589Z [INFO] [Project PhotoAlbum-Java]: getting dependencies promise.
+2026-03-17T03:35:22.590Z [INFO] [Project PhotoAlbum-Java]: reset dependencies promise.
+2026-03-17T03:35:22.591Z [INFO] [Environment] Running command (Java 8): mvn dependency:tree -B
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.photoalbum:photo-album >---------------------
+[INFO] Building Photo Album 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.3.0:tree (default-cli) @ photo-album ---
+[INFO] com.photoalbum:photo-album:jar:1.0.0
+[INFO] +- org.springframework.boot:spring-boot-starter-web:jar:2.7.18:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:2.7.18:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:2.7.18:compile
+[INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.2.12:compile
+[INFO] |  |  |  |  \- ch.qos.logback:logback-core:jar:1.2.12:compile
+[INFO] |  |  |  +- org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile
+[INFO] |  |  |  |  \- org.apache.logging.log4j:log4j-api:jar:2.17.2:compile
+[INFO] |  |  |  \- org.slf4j:jul-to-slf4j:jar:1.7.36:compile
+[INFO] |  |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:1.30:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.18:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.83:compile
+[INFO] |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.83:compile
+[INFO] |  +- org.springframework:spring-web:jar:5.3.31:compile
+[INFO] |  |  \- org.springframework:spring-beans:jar:5.3.31:compile
+[INFO] |  \- org.springframework:spring-webmvc:jar:5.3.31:compile
+[INFO] |     +- org.springframework:spring-aop:jar:5.3.31:compile
+[INFO] |     +- org.springframework:spring-context:jar:5.3.31:compile
+[INFO] |     \- org.springframework:spring-expression:jar:5.3.31:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.7.18:compile
+[INFO] |  +- org.thymeleaf:thymeleaf-spring5:jar:3.0.15.RELEASE:compile
+[INFO] |  |  +- org.thymeleaf:thymeleaf:jar:3.0.15.RELEASE:compile
+[INFO] |  |  |  +- org.attoparser:attoparser:jar:2.0.5.RELEASE:compile
+[INFO] |  |  |  \- org.unbescape:unbescape:jar:1.1.6.RELEASE:compile
+[INFO] |  |  \- org.slf4j:slf4j-api:jar:1.7.36:compile
+[INFO] |  \- org.thymeleaf.extras:thymeleaf-extras-java8time:jar:3.0.4.RELEASE:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-data-jpa:jar:2.7.18:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-aop:jar:2.7.18:compile
+[INFO] |  |  \- org.aspectj:aspectjweaver:jar:1.9.7:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-jdbc:jar:2.7.18:compile
+[INFO] |  |  +- com.zaxxer:HikariCP:jar:4.0.3:compile
+[INFO] |  |  \- org.springframework:spring-jdbc:jar:5.3.31:compile
+[INFO] |  +- jakarta.transaction:jakarta.transaction-api:jar:1.3.3:compile
+[INFO] |  +- jakarta.persistence:jakarta.persistence-api:jar:2.2.3:compile
+[INFO] |  +- org.hibernate:hibernate-core:jar:5.6.15.Final:compile
+[INFO] |  |  +- org.jboss.logging:jboss-logging:jar:3.4.3.Final:compile
+[INFO] |  |  +- net.bytebuddy:byte-buddy:jar:1.12.23:compile
+[INFO] |  |  +- antlr:antlr:jar:2.7.7:compile
+[INFO] |  |  +- org.jboss:jandex:jar:2.4.2.Final:compile
+[INFO] |  |  +- com.fasterxml:classmate:jar:1.5.1:compile
+[INFO] |  |  +- org.hibernate.common:hibernate-commons-annotations:jar:5.1.2.Final:compile
+[INFO] |  |  \- org.glassfish.jaxb:jaxb-runtime:jar:2.3.9:compile
+[INFO] |  |     +- org.glassfish.jaxb:txw2:jar:2.3.9:compile
+[INFO] |  |     +- com.sun.istack:istack-commons-runtime:jar:3.0.12:compile
+[INFO] |  |     \- com.sun.activation:jakarta.activation:jar:1.2.2:runtime
+[INFO] |  +- org.springframework.data:spring-data-jpa:jar:2.7.18:compile
+[INFO] |  |  +- org.springframework.data:spring-data-commons:jar:2.7.18:compile
+[INFO] |  |  +- org.springframework:spring-orm:jar:5.3.31:compile
+[INFO] |  |  \- org.springframework:spring-tx:jar:5.3.31:compile
+[INFO] |  \- org.springframework:spring-aspects:jar:5.3.31:compile
+[INFO] +- com.oracle.database.jdbc:ojdbc8:jar:21.5.0.0:runtime
+[INFO] +- org.springframework.boot:spring-boot-starter-validation:jar:2.7.18:compile
+[INFO] |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.83:compile
+[INFO] |  \- org.hibernate.validator:hibernate-validator:jar:6.2.5.Final:compile
+[INFO] |     \- jakarta.validation:jakarta.validation-api:jar:2.0.2:compile
+[INFO] +- commons-io:commons-io:jar:2.11.0:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-json:jar:2.7.18:compile
+[INFO] |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:compile
+[INFO] |  |  \- com.fasterxml.jackson.core:jackson-core:jar:2.13.5:compile
+[INFO] |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:compile
+[INFO] |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:compile
+[INFO] |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-test:jar:2.7.18:test
+[INFO] |  +- org.springframework.boot:spring-boot-test:jar:2.7.18:test
+[INFO] |  +- org.springframework.boot:spring-boot-test-autoconfigure:jar:2.7.18:test
+[INFO] |  +- com.jayway.jsonpath:json-path:jar:2.7.0:test
+[INFO] |  |  \- net.minidev:json-smart:jar:2.4.11:test
+[INFO] |  |     \- net.minidev:accessors-smart:jar:2.4.11:test
+[INFO] |  |        \- org.ow2.asm:asm:jar:9.3:test
+[INFO] |  +- jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile
+[INFO] |  |  \- jakarta.activation:jakarta.activation-api:jar:1.2.2:compile
+[INFO] |  +- org.assertj:assertj-core:jar:3.22.0:test
+[INFO] |  +- org.hamcrest:hamcrest:jar:2.2:test
+[INFO] |  +- org.junit.jupiter:junit-jupiter:jar:5.8.2:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test
+[INFO] |  |  |  +- org.opentest4j:opentest4j:jar:1.2.0:test
+[INFO] |  |  |  +- org.junit.platform:junit-platform-commons:jar:1.8.2:test
+[INFO] |  |  |  \- org.apiguardian:apiguardian-api:jar:1.1.2:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test
+[INFO] |  |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test
+[INFO] |  |     \- org.junit.platform:junit-platform-engine:jar:1.8.2:test
+[INFO] |  +- org.mockito:mockito-core:jar:4.5.1:test
+[INFO] |  |  +- net.bytebuddy:byte-buddy-agent:jar:1.12.23:test
+[INFO] |  |  \- org.objenesis:objenesis:jar:3.2:test
+[INFO] |  +- org.mockito:mockito-junit-jupiter:jar:4.5.1:test
+[INFO] |  +- org.skyscreamer:jsonassert:jar:1.5.1:test
+[INFO] |  |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[INFO] |  +- org.springframework:spring-core:jar:5.3.31:compile
+[INFO] |  |  \- org.springframework:spring-jcl:jar:5.3.31:compile
+[INFO] |  +- org.springframework:spring-test:jar:5.3.31:test
+[INFO] |  \- org.xmlunit:xmlunit-core:jar:2.9.1:test
+[INFO] +- com.h2database:h2:jar:2.1.214:test
+[INFO] \- org.springframework.boot:spring-boot-devtools:jar:2.7.18:compile
+[INFO]    +- org.springframework.boot:spring-boot:jar:2.7.18:compile
+[INFO]    \- org.springframework.boot:spring-boot-autoconfigure:jar:2.7.18:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.390 s
+[INFO] Finished at: 2026-03-17T11:35:26+08:00
+[INFO] ------------------------------------------------------------------------
+2026-03-17T03:35:26.128Z [INFO] [MavenBuildTool] Successfully got dependency tree of C:\Users\yueli6\Desktop\PhotoAlbum-Java
+2026-03-17T03:35:26.130Z [INFO] [MavenBuildTool] Getting Java version of C:\Users\yueli6\Desktop\PhotoAlbum-Java from pom.xml
+2026-03-17T03:35:26.131Z [INFO] [MavenBuildTool] Searching for pom.xml files in C:\Users\yueli6\Desktop\PhotoAlbum-Java
+2026-03-17T03:35:26.132Z [INFO] [MavenBuildTool] Found pom.xml files: C:\Users\yueli6\Desktop\PhotoAlbum-Java\pom.xml
+2026-03-17T03:35:26.134Z [INFO] [MavenBuildTool] Java version found in C:\Users\yueli6\Desktop\PhotoAlbum-Java\pom.xml: 8
+2026-03-17T03:35:26.135Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object]
+2026-03-17T03:35:26.136Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Spring Boot
+2026-03-17T03:35:26.138Z [WARN] No source dependencies found for Spring Framework. Skipping target dependency validation
+2026-03-17T03:35:26.139Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Spring Framework
+2026-03-17T03:35:26.140Z [WARN] No source dependencies found for Spring Security. Skipping target dependency validation
+2026-03-17T03:35:26.141Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Spring Security
+2026-03-17T03:35:26.142Z [WARN] No source dependencies found for Jakarta EE. Skipping target dependency validation
+2026-03-17T03:35:26.143Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Jakarta EE
+2026-03-17T03:35:26.145Z [WARN] No source dependencies found for JUnit. Skipping target dependency validation
+2026-03-17T03:35:26.146Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:JUnit
+2026-03-17T03:35:26.148Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Java
+2026-03-17T03:35:26.149Z [INFO] validateAndUpdateTargets, userTargets: [object Object],[object Object]
+2026-03-17T03:35:26.150Z [INFO] Target Java version: 17
+2026-03-17T03:35:26.152Z [INFO] [Environment] Running command (Java 17): java -version
+openjdk version "17.0.16" 2025-07-15 LTS
+OpenJDK Runtime Environment Microsoft-11926163 (build 17.0.16+8-LTS)
+OpenJDK 64-Bit Server VM Microsoft-11926163 (build 17.0.16+8-LTS, mixed mode, sharing)
+2026-03-17T03:35:26.325Z [INFO] [JdkEnvironment] Got real Java version: 17.0.16
+2026-03-17T03:35:26.326Z [INFO] Target JDK: {"name":"java","path":"C:\\Program Files\\Microsoft\\jdk-17.0.16.8-hotspot\\bin","version":"17"}
+2026-03-17T03:35:26.327Z [INFO] Upgrade options: {
+  "workingBranch": "main",
+  "runTests": true,
+  "target": {
+    "jdk": {
+      "name": "java",
+      "version": "17",
+      "path": "C:\\Program Files\\Microsoft\\jdk-17.0.16.8-hotspot\\bin"
+    },
+    "dependencies": [
+      {
+        "name": "Java",
+        "groupId": "java",
+        "artifactId": "*",
+        "version": "17",
+        "recipes": [
+          {
+            "id": "com.microsoft.java.UpgradeToJava17",
+            "name": "Upgrade from Java 8 to Java 17",
+            "description": "Migrate Java 8 to Java 17.",
+            "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava17",
+            "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.UpgradeToJava17` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 17 from any previous version larger than Java 8.\n"
+          }
+        ],
+        "supportedSources": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": ">=8 <17"
+          },
+          {
+            "name": "Java",
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "11",
+            "recipes": [
+              {
+                "id": "com.microsoft.java.UpgradeToJava11",
+                "name": "Upgrade from Java 8 to Java 11",
+                "description": "Migrate Java 8 to Java 11.",
+                "url": "https://docs.openrewrite.org/recipes/java/migrate/java8tojava11",
+                "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.Java8toJava11` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 11 from any previous version larger than Java 8.\n"
+              }
+            ],
+            "supportedSources": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": ">=8 <11"
+              }
+            ],
+            "effects": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": "11"
+              }
+            ]
+          }
+        ],
+        "effects": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "17"
+          }
+        ]
+      },
+      {
+        "name": "Spring Boot",
+        "groupId": "org.springframework.boot",
+        "artifactId": "*",
+        "version": "3.4.x",
+        "dependencies": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": ">=17 <=24"
+          }
+        ],
+        "recipes": [
+          {
+            "id": "com.microsoft.java.UpgradeToSpringBoot_3_4",
+            "name": "Upgrading from Spring Boot 3.3 to 3.4",
+            "description": "Upgrading from Spring Boot 3.3 to 3.4 using AI.",
+            "content": "- Refer to [Upgrading to Spring Boot 3.4 from 3.3](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.4-Release-Notes#upgrading-from-spring-boot-33) for more instructions about upgrading to Spring Boot 3.4 from 3.3.",
+            "url": "https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.4-Release-Notes"
+          }
+        ],
+        "supportedSources": [
+          {
+            "groupId": "org.springframework.boot",
+            "artifactId": "*",
+            "version": "3.3.x"
+          },
+          {
+            "name": "Spring Boot",
+            "groupId": "org.springframework.boot",
+            "artifactId": "*",
+            "version": "3.3.x",
+            "dependencies": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": ">=17 <=23"
+              }
+            ],
+            "recipes": [
+              {
+                "id": "com.microsoft.java.UpgradeToSpringBoot_3_3",
+                "name": "Upgrade Spring Boot to 3.3",
+                "description": "Migrate low-level to Spring Boot 3.3 directly.",
+                "url": "https://docs.openrewrite.org/recipes/java/spring/boot3/upgradespringboot_3_3",
+                "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.spring.boot3.UpgradeSpringBoot_3_3` in recipe lib `org.openrewrite.recipe:rewrite-spring:5.25.1` to make initial code changes for upgrading Spring Boot to 3.3 from any previous version.\n"
+              }
+            ],
+            "supportedSources": [
+              {
+                "groupId": "org.springframework.boot",
+                "artifactId": "*",
+                "version": "<=3.3.12"
+              },
+              {
+                "name": "Spring Boot",
+                "groupId": "org.springframework.boot",
+                "artifactId": "*",
+                "version": "2.7.x",
+                "dependencies": [
+                  {
+                    "groupId": "java",
+                    "artifactId": "*",
+                    "version": ">=8 <=21"
+                  }
+                ],
+                "recipes": [
+                  {
+                    "id": "com.microsoft.java.UpgradeToSpringBoot_2_7",
+                    "name": "Upgrade Spring Boot to 2.7",
+                    "description": "Migrate low-level to Spring Boot 2.7 directly.",
+                    "url": "https://docs.openrewrite.org/recipes/java/spring/boot2/upgradespringboot_2_7",
+                    "content": "\n-  Apply OpenRewrite recipe `org.openrewrite.java.spring.boot2.UpgradeSpringBoot_2_7` in recipe lib `org.openrewrite.recipe:rewrite-spring:5.25.1` to make initial code changes for upgrading Spring Boot to 2.7 from any previous version.\n"
+                  }
+                ],
+                "supportedSources": [
+                  {
+                    "groupId": "org.springframework.boot",
+                    "artifactId": "*",
+                    "version": "<=2.7.18"
+                  }
+                ],
+                "effects": [
+                  {
+                    "groupId": "org.springframework.boot",
+                    "artifactId": "*",
+                    "version": "2.7.x"
+                  },
+                  {
+                    "groupId": "java",
+                    "artifactId": "*",
+                    "version": "8"
+                  },
+                  {
+                    "groupId": "org.springframework",
+                    "artifactId": "*",
+                    "version": "5.3.x"
+                  }
+                ]
+              },
+              {
+                "name": "Spring Boot",
+                "groupId": "org.springframework.boot",
+                "artifactId": "*",
+                "version": "3.2.x",
+                "dependencies": [
+                  {
+                    "groupId": "java",
+                    "artifactId": "*",
+                    "version": ">=17 <=21"
+                  }
+                ],
+                "recipes": [
+                  {
+                    "id": "com.microsoft.java.UpgradeToSpringBoot_3_2",
+                    "name": "Upgrade Spring Boot to 3.2",
+                    "description": "Migrate low-level to Spring Boot 3.2 directly.",
+                    "url": "https://docs.openrewrite.org/recipes/java/spring/boot3/upgradespringboot_3_2",
+                    "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.spring.boot3.UpgradeSpringBoot_3_2` in recipe lib `org.openrewrite.recipe:rewrite-spring:5.25.1` to make initial code changes for upgrading Spring Boot to 3.2 from any previous version.\n"
+                  }
+                ],
+                "supportedSources": [
+                  {
+                    "groupId": "org.springframework.boot",
+                    "artifactId": "*",
+                    "version": "<=3.2.12"
+                  },
+                  {
+                    "name": "Spring Boot",
+                    "groupId": "org.springframework.boot",
+                    "artifactId": "*",
+                    "version": "2.7.x",
+                    "dependencies": [
+                      {
+                        "groupId": "java",
+                        "artifactId": "*",
+                        "version": ">=8 <=21"
+                      }
+                    ],
+                    "recipes": [
+                      {
+                        "id": "com.microsoft.java.UpgradeToSpringBoot_2_7",
+                        "name": "Upgrade Spring Boot to 2.7",
+                        "description": "Migrate low-level to Spring Boot 2.7 directly.",
+                        "url": "https://docs.openrewrite.org/recipes/java/spring/boot2/upgradespringboot_2_7",
+                        "content": "\n-  Apply OpenRewrite recipe `org.openrewrite.java.spring.boot2.UpgradeSpringBoot_2_7` in recipe lib `org.openrewrite.recipe:rewrite-spring:5.25.1` to make initial code changes for upgrading Spring Boot to 2.7 from any previous version.\n"
+                      }
+                    ],
+                    "supportedSources": [
+                      {
+                        "groupId": "org.springframework.boot",
+                        "artifactId": "*",
+                        "version": "<=2.7.18"
+                      }
+                    ],
+                    "effects": [
+                      {
+                        "groupId": "org.springframework.boot",
+                        "artifactId": "*",
+                        "version": "2.7.x"
+                      },
+                      {
+                        "groupId": "java",
+                        "artifactId": "*",
+                        "version": "8"
+                      },
+                      {
+                        "groupId": "org.springframework",
+                        "artifactId": "*",
+                        "version": "5.3.x"
+                      }
+                    ]
+                  }
+                ],
+                "effects": [
+                  {
+                    "groupId": "org.springframework.boot",
+                    "artifactId": "*",
+                    "version": "3.2.x"
+                  },
+                  {
+                    "groupId": "java",
+                    "artifactId": "*",
+                    "version": "17"
+                  },
+                  {
+                    "groupId": "org.springframework",
+                    "artifactId": "*",
+                    "version": "6.1.x"
+                  }
+                ]
+              }
+            ],
+            "effects": [
+              {
+                "groupId": "org.springframework.boot",
+                "artifactId": "*",
+                "version": "3.3.x"
+              },
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": "17"
+              },
+              {
+                "groupId": "org.springframework",
+                "artifactId": "*",
+                "version": "6.1.x"
+              }
+            ]
+          }
+        ],
+        "effects": [
+          {
+            "groupId": "org.springframework.boot",
+            "artifactId": "*",
+            "version": "3.4.x"
+          }
+        ]
+      }
+    ]
+  }
+}
+2026-03-17T03:35:26.328Z [INFO] Project configuration and upgrade options initialized successfully.
+2026-03-17T03:35:26.404Z [INFO] working tree is cleaned.
+2026-03-17T03:35:26.405Z [INFO] Start prechecking...
+2026-03-17T03:36:04.354Z [INFO] Precheck completed successfully.
+2026-03-17T03:36:04.416Z [INFO] main
+
+2026-03-17T03:36:04.425Z [INFO] Create or reuse the working branch main
+2026-03-17T03:36:04.565Z [ERROR] Already on 'main'
+
+2026-03-17T03:36:04.573Z [INFO] D	target/classes/application-docker.properties
+D	target/classes/application.properties
+D	target/classes/com/photoalbum/PhotoAlbumApplication.class
+D	target/classes/com/photoalbum/controller/DetailController.class
+D	target/classes/com/photoalbum/controller/HomeController.class
+D	target/classes/com/photoalbum/controller/PhotoFileController.class
+D	target/classes/com/photoalbum/model/Photo.class
+D	target/classes/com/photoalbum/model/UploadResult.class
+D	target/classes/com/photoalbum/repository/PhotoRepository.class
+D	target/classes/com/photoalbum/service/PhotoService.class
+D	target/classes/com/photoalbum/service/impl/PhotoServiceImpl.class
+D	target/classes/com/photoalbum/util/MathUtil.class
+D	target/classes/static/css/site.css
+D	target/classes/static/js/upload.js
+D	target/classes/static/uploads/5c62a4c2-d4eb-446f-9cd2-7ab8898cf371.jpg
+D	target/classes/templates/detail.html
+D	target/classes/templates/index.html
+D	target/classes/templates/layout.html
+D	target/test-classes/application-test.properties
+D	target/test-classes/com/photoalbum/PhotoAlbumApplicationTests.class
+Your branch is up to date with 'origin/main'.
+
+2026-03-17T03:36:04.581Z [INFO] Switched the working branch from main to main
+2026-03-17T03:36:04.582Z [INFO] Git working branch is set up.
+2026-03-17T03:36:04.641Z [INFO] c1812a9c2d1bcbf8f0be463e6c91871185f4a703
+

@@ -1,0 +1,1556 @@
+2026-03-17T03:34:07.313Z [INFO] Initializing project configuration...
+2026-03-17T03:34:07.315Z [INFO] Project C:\Users\yueli6\Desktop\PhotoAlbum-Java is a maven project, try to get java version from pom.xml
+2026-03-17T03:34:07.319Z [INFO] Project java version: 8
+2026-03-17T03:34:07.320Z [INFO] Maven project detected.
+2026-03-17T03:34:07.321Z [INFO] Build tool type: mvn
+2026-03-17T03:34:07.468Z [ERROR] JDK is not provided or detected for Java 8.
+2026-03-17T03:34:17.732Z [INFO] [Environment] Running command (Java 8): java -version
+openjdk version "1.8.0_482"
+OpenJDK Runtime Environment (Temurin)(build 1.8.0_482-b08)
+OpenJDK 64-Bit Server VM (Temurin)(build 25.482-b08, mixed mode)
+2026-03-17T03:34:18.581Z [INFO] [JdkEnvironment] Got real Java version: 1.8.0_482
+2026-03-17T03:34:18.582Z [INFO] JDK: {
+  "name": "java",
+  "path": "C:\\Users\\yueli6\\.jdk\\jdk-8\\bin",
+  "version": "8"
+}
+2026-03-17T03:34:18.610Z [INFO] [Environment] Running command (Java 8): mvn --version
+Apache Maven 3.9.6 (bc0240f3c744dd6b6ec2920b3cd08dcc295161ae)
+Maven home: C:\Program Files\Apache\apache-maven-3.9.6
+Java version: 1.8.0_482, vendor: Temurin, runtime: C:\Users\yueli6\.jdk\jdk-8\jre
+Default locale: zh_CN, platform encoding: GBK
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+2026-03-17T03:34:22.908Z [INFO] Real build tool version: 3.9.6
+2026-03-17T03:34:22.908Z [INFO] Build tool: {
+  "name": "mvn",
+  "path": "C:\\Program Files\\Apache\\apache-maven-3.9.6\\bin",
+  "version": "3.9.6"
+}
+2026-03-17T03:34:22.909Z [INFO] Project config: {
+  "buildTool": {
+    "path": "C:\\Program Files\\Apache\\apache-maven-3.9.6\\bin",
+    "name": "mvn",
+    "version": "3.9.6"
+  },
+  "jdk": {
+    "path": "C:\\Users\\yueli6\\.jdk\\jdk-8\\bin",
+    "version": "8",
+    "name": "java"
+  },
+  "name": "PhotoAlbum-Java",
+  "dir": "C:\\Users\\yueli6\\Desktop\\PhotoAlbum-Java"
+}
+2026-03-17T03:34:22.910Z [INFO] Project configuration initialized: {
+  "buildTool": {
+    "path": "C:\\Program Files\\Apache\\apache-maven-3.9.6\\bin",
+    "name": "mvn",
+    "version": "3.9.6"
+  },
+  "jdk": {
+    "path": "C:\\Users\\yueli6\\.jdk\\jdk-8\\bin",
+    "version": "8",
+    "name": "java"
+  },
+  "name": "PhotoAlbum-Java",
+  "dir": "C:\\Users\\yueli6\\Desktop\\PhotoAlbum-Java"
+}
+2026-03-17T03:34:22.911Z [INFO] Initializing upgrade goals...
+2026-03-17T03:34:22.917Z [INFO] [Environment] Running command (Java 8): mvn dependency:tree -B
+[INFO] Scanning for projects...
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/build-helper-maven-plugin/3.3.0/build-helper-maven-plugin-3.3.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/build-helper-maven-plugin/3.3.0/build-helper-maven-plugin-3.3.0.pom (7.4 kB at 12 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/mojo-parent/65/mojo-parent-65.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/mojo-parent/65/mojo-parent-65.pom (35 kB at 241 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.1/junit-bom-5.8.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.1/junit-bom-5.8.1.pom (5.6 kB at 42 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/build-helper-maven-plugin/3.3.0/build-helper-maven-plugin-3.3.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/build-helper-maven-plugin/3.3.0/build-helper-maven-plugin-3.3.0.jar (68 kB at 300 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/flywaydb/flyway-maven-plugin/8.5.13/flyway-maven-plugin-8.5.13.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/flywaydb/flyway-maven-plugin/8.5.13/flyway-maven-plugin-8.5.13.pom (4.7 kB at 33 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/flywaydb/flyway-parent/8.5.13/flyway-parent-8.5.13.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/flywaydb/flyway-parent/8.5.13/flyway-parent-8.5.13.pom (31 kB at 171 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/flywaydb/flyway-maven-plugin/8.5.13/flyway-maven-plugin-8.5.13.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/flywaydb/flyway-maven-plugin/8.5.13/flyway-maven-plugin-8.5.13.jar (130 kB at 700 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/pl/project13/maven/git-commit-id-plugin-parent/4.9.10/git-commit-id-plugin-parent-4.9.10.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/pl/project13/maven/git-commit-id-plugin-parent/4.9.10/git-commit-id-plugin-parent-4.9.10.pom (12 kB at 83 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/pl/project13/maven/git-commit-id-plugin/4.9.10/git-commit-id-plugin-4.9.10.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/pl/project13/maven/git-commit-id-plugin/4.9.10/git-commit-id-plugin-4.9.10.jar (40 kB at 56 kB/s)
+[WARNING] Failed to retrieve plugin descriptor for pl.project13.maven:git-commit-id-plugin:4.9.10: Failed to parse plugin descriptor for pl.project13.maven:git-commit-id-plugin:4.9.10 (C:\Users\yueli6\.m2\repository\pl\project13\maven\git-commit-id-plugin\4.9.10\git-commit-id-plugin-4.9.10.jar): zip file is empty
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/johnzon/johnzon-maven-plugin/1.2.21/johnzon-maven-plugin-1.2.21.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/johnzon/johnzon-maven-plugin/1.2.21/johnzon-maven-plugin-1.2.21.pom (4.7 kB at 36 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/johnzon/johnzon/1.2.21/johnzon-1.2.21.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/johnzon/johnzon/1.2.21/johnzon-1.2.21.pom (31 kB at 189 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/johnzon/johnzon-maven-plugin/1.2.21/johnzon-maven-plugin-1.2.21.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/johnzon/johnzon-maven-plugin/1.2.21/johnzon-maven-plugin-1.2.21.jar (35 kB at 56 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jooq/jooq-parent/3.14.16/jooq-parent-3.14.16.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jooq/jooq-parent/3.14.16/jooq-parent-3.14.16.pom (28 kB at 223 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jooq/jooq-codegen-maven/3.14.16/jooq-codegen-maven-3.14.16.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jooq/jooq-codegen-maven/3.14.16/jooq-codegen-maven-3.14.16.jar (17 kB at 48 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-project/1.6.21/kotlin-project-1.6.21.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-project/1.6.21/kotlin-project-1.6.21.pom (10 kB at 68 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-maven-plugin/1.6.21/kotlin-maven-plugin-1.6.21.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-maven-plugin/1.6.21/kotlin-maven-plugin-1.6.21.jar (80 kB at 520 kB/s)
+[WARNING] Failed to retrieve plugin descriptor for org.jetbrains.kotlin:kotlin-maven-plugin:1.6.21: Failed to parse plugin descriptor for org.jetbrains.kotlin:kotlin-maven-plugin:1.6.21 (C:\Users\yueli6\.m2\repository\org\jetbrains\kotlin\kotlin-maven-plugin\1.6.21\kotlin-maven-plugin-1.6.21.jar): zip file is empty
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/liquibase/liquibase-maven-plugin/4.9.1/liquibase-maven-plugin-4.9.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/liquibase/liquibase-maven-plugin/4.9.1/liquibase-maven-plugin-4.9.1.pom (2.7 kB at 18 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/liquibase/liquibase-maven-plugin/4.9.1/liquibase-maven-plugin-4.9.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/liquibase/liquibase-maven-plugin/4.9.1/liquibase-maven-plugin-4.9.1.jar (108 kB at 622 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-antrun-plugin/3.0.0/maven-antrun-plugin-3.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-antrun-plugin/3.0.0/maven-antrun-plugin-3.0.0.pom (4.7 kB at 47 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-antrun-plugin/3.0.0/maven-antrun-plugin-3.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-antrun-plugin/3.0.0/maven-antrun-plugin-3.0.0.jar (39 kB at 43 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-assembly-plugin/3.3.0/maven-assembly-plugin-3.3.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-assembly-plugin/3.3.0/maven-assembly-plugin-3.3.0.jar (242 kB at 1.1 MB/s)
+[INFO] 
+[INFO] ---------------------< com.photoalbum:photo-album >---------------------
+[INFO] Building Photo Album 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.3.0:tree (default-cli) @ photo-album ---
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-impl/3.1.0/maven-reporting-impl-3.1.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-impl/3.1.0/maven-reporting-impl-3.1.0.pom (7.2 kB at 41 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.2.2/plexus-archiver-4.2.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.2.2/plexus-archiver-4.2.2.pom (4.4 kB at 24 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/6.1/plexus-6.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/6.1/plexus-6.1.pom (24 kB at 151 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/tukaani/xz/1.8/xz-1.8.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/tukaani/xz/1.8/xz-1.8.pom (1.9 kB at 13 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-analyzer/1.12.0/maven-dependency-analyzer-1.12.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-analyzer/1.12.0/maven-dependency-analyzer-1.12.0.pom (7.2 kB at 41 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.0.5/maven-model-2.0.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.0.5/maven-model-2.0.5.pom (2.7 kB at 22 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/2.0.5/maven-2.0.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/2.0.5/maven-2.0.5.pom (5.7 kB at 45 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/5/maven-parent-5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/5/maven-parent-5.pom (15 kB at 104 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/3/apache-3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/3/apache-3.pom (3.4 kB at 29 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.0.5/maven-artifact-2.0.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.0.5/maven-artifact-2.0.5.pom (727 B at 6.3 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.1.0/maven-dependency-tree-3.1.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.1.0/maven-dependency-tree-3.1.0.pom (6.9 kB at 57 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/3.0.5/maven-core-3.0.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/3.0.5/maven-core-3.0.5.pom (5.5 kB at 43 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/3.0.5/maven-3.0.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/3.0.5/maven-3.0.5.pom (22 kB at 133 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.0.5/maven-model-3.0.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.0.5/maven-model-3.0.5.pom (3.8 kB at 29 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/3.0.5/maven-settings-3.0.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/3.0.5/maven-settings-3.0.5.pom (1.8 kB at 15 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings-builder/3.0.5/maven-settings-builder-3.0.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings-builder/3.0.5/maven-settings-builder-3.0.5.pom (2.3 kB at 17 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/3.0.5/maven-repository-metadata-3.0.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/3.0.5/maven-repository-metadata-3.0.5.pom (1.9 kB at 13 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.0.5/maven-artifact-3.0.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.0.5/maven-artifact-3.0.5.pom (1.6 kB at 11 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/3.0.5/maven-plugin-api-3.0.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/3.0.5/maven-plugin-api-3.0.5.pom (2.7 kB at 19 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject-plexus/2.3.0/sisu-inject-plexus-2.3.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject-plexus/2.3.0/sisu-inject-plexus-2.3.0.pom (6.1 kB at 51 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/inject/guice-plexus/2.3.0/guice-plexus-2.3.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/inject/guice-plexus/2.3.0/guice-plexus-2.3.0.pom (3.8 kB at 31 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/inject/guice-bean/2.3.0/guice-bean-2.3.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/inject/guice-bean/2.3.0/guice-bean-2.3.0.pom (3.0 kB at 26 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/inject/containers/2.3.0/containers-2.3.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/inject/containers/2.3.0/containers-2.3.0.pom (1.2 kB at 9.9 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject/2.3.0/sisu-inject-2.3.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject/2.3.0/sisu-inject-2.3.0.pom (3.2 kB at 27 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-parent/2.3.0/sisu-parent-2.3.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-parent/2.3.0/sisu-parent-2.3.0.pom (11 kB at 59 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject-bean/2.3.0/sisu-inject-bean-2.3.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject-bean/2.3.0/sisu-inject-bean-2.3.0.pom (7.1 kB at 60 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-guava/0.9.9/sisu-guava-0.9.9.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-guava/0.9.9/sisu-guava-0.9.9.pom (1.1 kB at 9.1 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/inject/guava-parent/0.9.9/guava-parent-0.9.9.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/inject/guava-parent/0.9.9/guava-parent-0.9.9.pom (11 kB at 73 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model-builder/3.0.5/maven-model-builder-3.0.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model-builder/3.0.5/maven-model-builder-3.0.5.pom (2.5 kB at 17 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-aether-provider/3.0.5/maven-aether-provider-3.0.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-aether-provider/3.0.5/maven-aether-provider-3.0.5.pom (2.8 kB at 22 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-api/1.13.1/aether-api-1.13.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-api/1.13.1/aether-api-1.13.1.pom (1.4 kB at 8.4 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether/1.13.1/aether-1.13.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether/1.13.1/aether-1.13.1.pom (10 kB at 71 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-spi/1.13.1/aether-spi-1.13.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-spi/1.13.1/aether-spi-1.13.1.pom (1.4 kB at 12 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-util/1.13.1/aether-util-1.13.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-util/1.13.1/aether-util-1.13.1.pom (1.7 kB at 14 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-impl/1.13.1/aether-impl-1.13.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-impl/1.13.1/aether-impl-1.13.1.pom (2.5 kB at 18 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/1.1.0/aether-util-1.1.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/1.1.0/aether-util-1.1.0.pom (2.1 kB at 14 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether/1.1.0/aether-1.1.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether/1.1.0/aether-1.1.0.pom (26 kB at 181 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.2.0/maven-common-artifact-filters-3.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.2.0/maven-common-artifact-filters-3.2.0.pom (6.9 kB at 59 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.2/commons-collections4-4.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.2/commons-collections4-4.2.pom (23 kB at 170 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-impl/3.1.0/maven-reporting-impl-3.1.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-impl/3.1.0/maven-reporting-impl-3.1.0.jar (19 kB at 49 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/xbean/xbean-reflect/3.7/xbean-reflect-3.7.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/collections/google-collections/1.0/google-collections-1.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-text/1.3/commons-text-1.3.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/2.1.0/plexus-container-default-2.1.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/3.1.0/maven-reporting-api-3.1.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/xbean/xbean-reflect/3.7/xbean-reflect-3.7.jar (148 kB at 779 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.2.2/plexus-archiver-4.2.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.2.2/plexus-archiver-4.2.2.jar (194 kB at 515 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.20/commons-compress-1.20.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-text/1.3/commons-text-1.3.jar (183 kB at 357 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/tukaani/xz/1.8/xz-1.8.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/2.1.0/plexus-container-default-2.1.0.jar (230 kB at 434 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.2.0/plexus-io-3.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/3.1.0/maven-reporting-api-3.1.0.jar (11 kB at 18 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-analyzer/1.12.0/maven-dependency-analyzer-1.12.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.20/commons-compress-1.20.jar (632 kB at 1.0 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.1.1/plexus-component-annotations-2.1.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.2.0/plexus-io-3.2.0.jar (76 kB at 112 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.0.5/maven-model-2.0.5.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/collections/google-collections/1.0/google-collections-1.0.jar (640 kB at 875 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.0.5/maven-artifact-2.0.5.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/tukaani/xz/1.8/xz-1.8.jar (109 kB at 147 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.1.0/maven-dependency-tree-3.1.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.1.1/plexus-component-annotations-2.1.1.jar (4.1 kB at 5.2 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/1.1.0/aether-util-1.1.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.0.5/maven-model-2.0.5.jar (86 kB at 102 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.2.0/maven-common-artifact-filters-3.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.1.0/maven-dependency-tree-3.1.0.jar (103 kB at 119 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.plexus/0.0.0.M5/org.eclipse.sisu.plexus-0.0.0.M5.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.0.5/maven-artifact-2.0.5.jar (85 kB at 98 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.inject/0.0.0.M5/org.eclipse.sisu.inject-0.0.0.M5.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/1.1.0/aether-util-1.1.0.jar (150 kB at 156 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.2/commons-collections4-4.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.2.0/maven-common-artifact-filters-3.2.0.jar (61 kB at 62 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.plexus/0.0.0.M5/org.eclipse.sisu.plexus-0.0.0.M5.jar (197 kB at 193 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.inject/0.0.0.M5/org.eclipse.sisu.inject-0.0.0.M5.jar (291 kB at 263 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar (247 kB at 212 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.2/commons-collections4-4.2.jar (753 kB at 642 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-analyzer/1.12.0/maven-dependency-analyzer-1.12.0.jar (37 kB at 25 kB/s)
+[INFO] com.photoalbum:photo-album:jar:1.0.0
+[INFO] +- org.springframework.boot:spring-boot-starter-web:jar:2.7.18:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:2.7.18:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:2.7.18:compile
+[INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.2.12:compile
+[INFO] |  |  |  |  \- ch.qos.logback:logback-core:jar:1.2.12:compile
+[INFO] |  |  |  +- org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile
+[INFO] |  |  |  |  \- org.apache.logging.log4j:log4j-api:jar:2.17.2:compile
+[INFO] |  |  |  \- org.slf4j:jul-to-slf4j:jar:1.7.36:compile
+[INFO] |  |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:1.30:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.18:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.83:compile
+[INFO] |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.83:compile
+[INFO] |  +- org.springframework:spring-web:jar:5.3.31:compile
+[INFO] |  |  \- org.springframework:spring-beans:jar:5.3.31:compile
+[INFO] |  \- org.springframework:spring-webmvc:jar:5.3.31:compile
+[INFO] |     +- org.springframework:spring-aop:jar:5.3.31:compile
+[INFO] |     +- org.springframework:spring-context:jar:5.3.31:compile
+[INFO] |     \- org.springframework:spring-expression:jar:5.3.31:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.7.18:compile
+[INFO] |  +- org.thymeleaf:thymeleaf-spring5:jar:3.0.15.RELEASE:compile
+[INFO] |  |  +- org.thymeleaf:thymeleaf:jar:3.0.15.RELEASE:compile
+[INFO] |  |  |  +- org.attoparser:attoparser:jar:2.0.5.RELEASE:compile
+[INFO] |  |  |  \- org.unbescape:unbescape:jar:1.1.6.RELEASE:compile
+[INFO] |  |  \- org.slf4j:slf4j-api:jar:1.7.36:compile
+[INFO] |  \- org.thymeleaf.extras:thymeleaf-extras-java8time:jar:3.0.4.RELEASE:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-data-jpa:jar:2.7.18:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-aop:jar:2.7.18:compile
+[INFO] |  |  \- org.aspectj:aspectjweaver:jar:1.9.7:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-jdbc:jar:2.7.18:compile
+[INFO] |  |  +- com.zaxxer:HikariCP:jar:4.0.3:compile
+[INFO] |  |  \- org.springframework:spring-jdbc:jar:5.3.31:compile
+[INFO] |  +- jakarta.transaction:jakarta.transaction-api:jar:1.3.3:compile
+[INFO] |  +- jakarta.persistence:jakarta.persistence-api:jar:2.2.3:compile
+[INFO] |  +- org.hibernate:hibernate-core:jar:5.6.15.Final:compile
+[INFO] |  |  +- org.jboss.logging:jboss-logging:jar:3.4.3.Final:compile
+[INFO] |  |  +- net.bytebuddy:byte-buddy:jar:1.12.23:compile
+[INFO] |  |  +- antlr:antlr:jar:2.7.7:compile
+[INFO] |  |  +- org.jboss:jandex:jar:2.4.2.Final:compile
+[INFO] |  |  +- com.fasterxml:classmate:jar:1.5.1:compile
+[INFO] |  |  +- org.hibernate.common:hibernate-commons-annotations:jar:5.1.2.Final:compile
+[INFO] |  |  \- org.glassfish.jaxb:jaxb-runtime:jar:2.3.9:compile
+[INFO] |  |     +- org.glassfish.jaxb:txw2:jar:2.3.9:compile
+[INFO] |  |     +- com.sun.istack:istack-commons-runtime:jar:3.0.12:compile
+[INFO] |  |     \- com.sun.activation:jakarta.activation:jar:1.2.2:runtime
+[INFO] |  +- org.springframework.data:spring-data-jpa:jar:2.7.18:compile
+[INFO] |  |  +- org.springframework.data:spring-data-commons:jar:2.7.18:compile
+[INFO] |  |  +- org.springframework:spring-orm:jar:5.3.31:compile
+[INFO] |  |  \- org.springframework:spring-tx:jar:5.3.31:compile
+[INFO] |  \- org.springframework:spring-aspects:jar:5.3.31:compile
+[INFO] +- com.oracle.database.jdbc:ojdbc8:jar:21.5.0.0:runtime
+[INFO] +- org.springframework.boot:spring-boot-starter-validation:jar:2.7.18:compile
+[INFO] |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.83:compile
+[INFO] |  \- org.hibernate.validator:hibernate-validator:jar:6.2.5.Final:compile
+[INFO] |     \- jakarta.validation:jakarta.validation-api:jar:2.0.2:compile
+[INFO] +- commons-io:commons-io:jar:2.11.0:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-json:jar:2.7.18:compile
+[INFO] |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:compile
+[INFO] |  |  \- com.fasterxml.jackson.core:jackson-core:jar:2.13.5:compile
+[INFO] |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:compile
+[INFO] |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:compile
+[INFO] |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-test:jar:2.7.18:test
+[INFO] |  +- org.springframework.boot:spring-boot-test:jar:2.7.18:test
+[INFO] |  +- org.springframework.boot:spring-boot-test-autoconfigure:jar:2.7.18:test
+[INFO] |  +- com.jayway.jsonpath:json-path:jar:2.7.0:test
+[INFO] |  |  \- net.minidev:json-smart:jar:2.4.11:test
+[INFO] |  |     \- net.minidev:accessors-smart:jar:2.4.11:test
+[INFO] |  |        \- org.ow2.asm:asm:jar:9.3:test
+[INFO] |  +- jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile
+[INFO] |  |  \- jakarta.activation:jakarta.activation-api:jar:1.2.2:compile
+[INFO] |  +- org.assertj:assertj-core:jar:3.22.0:test
+[INFO] |  +- org.hamcrest:hamcrest:jar:2.2:test
+[INFO] |  +- org.junit.jupiter:junit-jupiter:jar:5.8.2:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test
+[INFO] |  |  |  +- org.opentest4j:opentest4j:jar:1.2.0:test
+[INFO] |  |  |  +- org.junit.platform:junit-platform-commons:jar:1.8.2:test
+[INFO] |  |  |  \- org.apiguardian:apiguardian-api:jar:1.1.2:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test
+[INFO] |  |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test
+[INFO] |  |     \- org.junit.platform:junit-platform-engine:jar:1.8.2:test
+[INFO] |  +- org.mockito:mockito-core:jar:4.5.1:test
+[INFO] |  |  +- net.bytebuddy:byte-buddy-agent:jar:1.12.23:test
+[INFO] |  |  \- org.objenesis:objenesis:jar:3.2:test
+[INFO] |  +- org.mockito:mockito-junit-jupiter:jar:4.5.1:test
+[INFO] |  +- org.skyscreamer:jsonassert:jar:1.5.1:test
+[INFO] |  |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[INFO] |  +- org.springframework:spring-core:jar:5.3.31:compile
+[INFO] |  |  \- org.springframework:spring-jcl:jar:5.3.31:compile
+[INFO] |  +- org.springframework:spring-test:jar:5.3.31:test
+[INFO] |  \- org.xmlunit:xmlunit-core:jar:2.9.1:test
+[INFO] +- com.h2database:h2:jar:2.1.214:test
+[INFO] \- org.springframework.boot:spring-boot-devtools:jar:2.7.18:compile
+[INFO]    +- org.springframework.boot:spring-boot:jar:2.7.18:compile
+[INFO]    \- org.springframework.boot:spring-boot-autoconfigure:jar:2.7.18:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  36.043 s
+[INFO] Finished at: 2026-03-17T11:35:00+08:00
+[INFO] ------------------------------------------------------------------------
+2026-03-17T03:35:00.626Z [INFO] [MavenBuildTool] Successfully got dependency tree of C:\Users\yueli6\Desktop\PhotoAlbum-Java
+2026-03-17T03:35:00.628Z [INFO] [MavenBuildTool] Getting Java version of C:\Users\yueli6\Desktop\PhotoAlbum-Java from pom.xml
+2026-03-17T03:35:00.629Z [INFO] [MavenBuildTool] Searching for pom.xml files in C:\Users\yueli6\Desktop\PhotoAlbum-Java
+2026-03-17T03:35:00.631Z [INFO] [MavenBuildTool] Getting all module coordinates of C:\Users\yueli6\Desktop\PhotoAlbum-Java
+2026-03-17T03:35:00.631Z [INFO] [MavenBuildTool] Getting effective POMs of C:\Users\yueli6\Desktop\PhotoAlbum-Java
+2026-03-17T03:35:00.633Z [INFO] [Environment] Running command (Java 8): mvn help:effective-pom -Doutput=effective-pom-6db7fa58-6c10-42bc-bd62-a0846335023a.log
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.photoalbum:photo-album >---------------------
+[INFO] Building Photo Album 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- help:3.2.0:effective-pom (default-cli) @ photo-album ---
+[INFO] Effective-POM written to: C:\Users\yueli6\Desktop\PhotoAlbum-Java\effective-pom-6db7fa58-6c10-42bc-bd62-a0846335023a.log
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.500 s
+[INFO] Finished at: 2026-03-17T11:35:03+08:00
+[INFO] ------------------------------------------------------------------------
+2026-03-17T03:35:03.537Z [INFO] [MavenBuildTool] Found pom.xml files: C:\Users\yueli6\Desktop\PhotoAlbum-Java\pom.xml
+2026-03-17T03:35:03.539Z [INFO] [MavenBuildTool] Java version found in C:\Users\yueli6\Desktop\PhotoAlbum-Java\pom.xml: 8
+2026-03-17T03:35:03.540Z [INFO] Source Java version: 8
+2026-03-17T03:35:03.541Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object]
+2026-03-17T03:35:03.544Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Spring Boot
+2026-03-17T03:35:03.545Z [WARN] No source dependencies found for Spring Framework. Skipping target dependency validation
+2026-03-17T03:35:03.546Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Spring Framework
+2026-03-17T03:35:03.546Z [WARN] No source dependencies found for Spring Security. Skipping target dependency validation
+2026-03-17T03:35:03.547Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Spring Security
+2026-03-17T03:35:03.547Z [WARN] No source dependencies found for Jakarta EE. Skipping target dependency validation
+2026-03-17T03:35:03.548Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Jakarta EE
+2026-03-17T03:35:03.548Z [WARN] No source dependencies found for JUnit. Skipping target dependency validation
+2026-03-17T03:35:03.549Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:JUnit
+2026-03-17T03:35:03.550Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Java
+2026-03-17T03:35:03.551Z [INFO] validateAndUpdateTargets, userTargets: [object Object],[object Object]
+2026-03-17T03:35:03.552Z [INFO] initUpgradeGoal, targetDeps: [object Object],[object Object]
+2026-03-17T03:35:03.553Z [INFO] Upgrade goal initialized: [
+  {
+    "name": "Java",
+    "groupId": "java",
+    "artifactId": "*",
+    "version": "17",
+    "recipes": [
+      {
+        "id": "com.microsoft.java.UpgradeToJava17",
+        "name": "Upgrade from Java 8 to Java 17",
+        "description": "Migrate Java 8 to Java 17.",
+        "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava17",
+        "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.UpgradeToJava17` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 17 from any previous version larger than Java 8.\n"
+      }
+    ],
+    "supportedSources": [
+      {
+        "groupId": "java",
+        "artifactId": "*",
+        "version": ">=8 <17"
+      },
+      {
+        "name": "Java",
+        "groupId": "java",
+        "artifactId": "*",
+        "version": "11",
+        "recipes": [
+          {
+            "id": "com.microsoft.java.UpgradeToJava11",
+            "name": "Upgrade from Java 8 to Java 11",
+            "description": "Migrate Java 8 to Java 11.",
+            "url": "https://docs.openrewrite.org/recipes/java/migrate/java8tojava11",
+            "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.Java8toJava11` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 11 from any previous version larger than Java 8.\n"
+          }
+        ],
+        "supportedSources": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": ">=8 <11"
+          }
+        ],
+        "effects": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "11"
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "groupId": "java",
+        "artifactId": "*",
+        "version": "17"
+      }
+    ]
+  },
+  {
+    "name": "Spring Boot",
+    "groupId": "org.springframework.boot",
+    "artifactId": "*",
+    "version": "3.4.x",
+    "dependencies": [
+      {
+        "groupId": "java",
+        "artifactId": "*",
+        "version": ">=17 <=24"
+      }
+    ],
+    "recipes": [
+      {
+        "id": "com.microsoft.java.UpgradeToSpringBoot_3_4",
+        "name": "Upgrading from Spring Boot 3.3 to 3.4",
+        "description": "Upgrading from Spring Boot 3.3 to 3.4 using AI.",
+        "content": "- Refer to [Upgrading to Spring Boot 3.4 from 3.3](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.4-Release-Notes#upgrading-from-spring-boot-33) for more instructions about upgrading to Spring Boot 3.4 from 3.3.",
+        "url": "https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.4-Release-Notes"
+      }
+    ],
+    "supportedSources": [
+      {
+        "groupId": "org.springframework.boot",
+        "artifactId": "*",
+        "version": "3.3.x"
+      },
+      {
+        "name": "Spring Boot",
+        "groupId": "org.springframework.boot",
+        "artifactId": "*",
+        "version": "3.3.x",
+        "dependencies": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": ">=17 <=23"
+          }
+        ],
+        "recipes": [
+          {
+            "id": "com.microsoft.java.UpgradeToSpringBoot_3_3",
+            "name": "Upgrade Spring Boot to 3.3",
+            "description": "Migrate low-level to Spring Boot 3.3 directly.",
+            "url": "https://docs.openrewrite.org/recipes/java/spring/boot3/upgradespringboot_3_3",
+            "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.spring.boot3.UpgradeSpringBoot_3_3` in recipe lib `org.openrewrite.recipe:rewrite-spring:5.25.1` to make initial code changes for upgrading Spring Boot to 3.3 from any previous version.\n"
+          }
+        ],
+        "supportedSources": [
+          {
+            "groupId": "org.springframework.boot",
+            "artifactId": "*",
+            "version": "<=3.3.12"
+          },
+          {
+            "name": "Spring Boot",
+            "groupId": "org.springframework.boot",
+            "artifactId": "*",
+            "version": "2.7.x",
+            "dependencies": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": ">=8 <=21"
+              }
+            ],
+            "recipes": [
+              {
+                "id": "com.microsoft.java.UpgradeToSpringBoot_2_7",
+                "name": "Upgrade Spring Boot to 2.7",
+                "description": "Migrate low-level to Spring Boot 2.7 directly.",
+                "url": "https://docs.openrewrite.org/recipes/java/spring/boot2/upgradespringboot_2_7",
+                "content": "\n-  Apply OpenRewrite recipe `org.openrewrite.java.spring.boot2.UpgradeSpringBoot_2_7` in recipe lib `org.openrewrite.recipe:rewrite-spring:5.25.1` to make initial code changes for upgrading Spring Boot to 2.7 from any previous version.\n"
+              }
+            ],
+            "supportedSources": [
+              {
+                "groupId": "org.springframework.boot",
+                "artifactId": "*",
+                "version": "<=2.7.18"
+              }
+            ],
+            "effects": [
+              {
+                "groupId": "org.springframework.boot",
+                "artifactId": "*",
+                "version": "2.7.x"
+              },
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": "8"
+              },
+              {
+                "groupId": "org.springframework",
+                "artifactId": "*",
+                "version": "5.3.x"
+              }
+            ]
+          },
+          {
+            "name": "Spring Boot",
+            "groupId": "org.springframework.boot",
+            "artifactId": "*",
+            "version": "3.2.x",
+            "dependencies": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": ">=17 <=21"
+              }
+            ],
+            "recipes": [
+              {
+                "id": "com.microsoft.java.UpgradeToSpringBoot_3_2",
+                "name": "Upgrade Spring Boot to 3.2",
+                "description": "Migrate low-level to Spring Boot 3.2 directly.",
+                "url": "https://docs.openrewrite.org/recipes/java/spring/boot3/upgradespringboot_3_2",
+                "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.spring.boot3.UpgradeSpringBoot_3_2` in recipe lib `org.openrewrite.recipe:rewrite-spring:5.25.1` to make initial code changes for upgrading Spring Boot to 3.2 from any previous version.\n"
+              }
+            ],
+            "supportedSources": [
+              {
+                "groupId": "org.springframework.boot",
+                "artifactId": "*",
+                "version": "<=3.2.12"
+              },
+              {
+                "name": "Spring Boot",
+                "groupId": "org.springframework.boot",
+                "artifactId": "*",
+                "version": "2.7.x",
+                "dependencies": [
+                  {
+                    "groupId": "java",
+                    "artifactId": "*",
+                    "version": ">=8 <=21"
+                  }
+                ],
+                "recipes": [
+                  {
+                    "id": "com.microsoft.java.UpgradeToSpringBoot_2_7",
+                    "name": "Upgrade Spring Boot to 2.7",
+                    "description": "Migrate low-level to Spring Boot 2.7 directly.",
+                    "url": "https://docs.openrewrite.org/recipes/java/spring/boot2/upgradespringboot_2_7",
+                    "content": "\n-  Apply OpenRewrite recipe `org.openrewrite.java.spring.boot2.UpgradeSpringBoot_2_7` in recipe lib `org.openrewrite.recipe:rewrite-spring:5.25.1` to make initial code changes for upgrading Spring Boot to 2.7 from any previous version.\n"
+                  }
+                ],
+                "supportedSources": [
+                  {
+                    "groupId": "org.springframework.boot",
+                    "artifactId": "*",
+                    "version": "<=2.7.18"
+                  }
+                ],
+                "effects": [
+                  {
+                    "groupId": "org.springframework.boot",
+                    "artifactId": "*",
+                    "version": "2.7.x"
+                  },
+                  {
+                    "groupId": "java",
+                    "artifactId": "*",
+                    "version": "8"
+                  },
+                  {
+                    "groupId": "org.springframework",
+                    "artifactId": "*",
+                    "version": "5.3.x"
+                  }
+                ]
+              }
+            ],
+            "effects": [
+              {
+                "groupId": "org.springframework.boot",
+                "artifactId": "*",
+                "version": "3.2.x"
+              },
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": "17"
+              },
+              {
+                "groupId": "org.springframework",
+                "artifactId": "*",
+                "version": "6.1.x"
+              }
+            ]
+          }
+        ],
+        "effects": [
+          {
+            "groupId": "org.springframework.boot",
+            "artifactId": "*",
+            "version": "3.3.x"
+          },
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "17"
+          },
+          {
+            "groupId": "org.springframework",
+            "artifactId": "*",
+            "version": "6.1.x"
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "groupId": "org.springframework.boot",
+        "artifactId": "*",
+        "version": "3.4.x"
+      }
+    ]
+  }
+]
+2026-03-17T03:35:03.554Z [INFO] Initializing upgrade options...
+2026-03-17T03:35:03.555Z [INFO] Source Java version: 8
+2026-03-17T03:35:03.555Z [INFO] Source JDK: {"name":"java","path":"C:\\Users\\yueli6\\.jdk\\jdk-8\\bin","version":"8"}
+2026-03-17T03:35:03.556Z [INFO] Target Java version: 17
+2026-03-17T03:35:04.255Z [INFO] Target JDK: {"name":"java","path":"C:\\Program Files\\Microsoft\\jdk-17.0.16.8-hotspot\\bin","version":"17.0.16","source":"PATH"}
+2026-03-17T03:35:04.256Z [INFO] Build tool type detected from path: mvn
+2026-03-17T03:35:04.256Z [INFO] Build tool type: mvn
+2026-03-17T03:35:04.257Z [INFO] Build tool: {"name":"mvn","path":"C:\\Program Files\\Apache\\apache-maven-3.9.6\\bin","version":""}
+2026-03-17T03:35:04.315Z [INFO] main
+
+2026-03-17T03:35:04.323Z [INFO] Working branch: main
+2026-03-17T03:35:04.324Z [INFO] Upgrade options initialized: {
+  "target": {
+    "jdk": {
+      "name": "java",
+      "path": "C:\\Program Files\\Microsoft\\jdk-17.0.16.8-hotspot\\bin",
+      "version": "17.0.16",
+      "source": "PATH"
+    },
+    "dependencies": [
+      {
+        "name": "Java",
+        "groupId": "java",
+        "artifactId": "*",
+        "version": "17",
+        "recipes": [
+          {
+            "id": "com.microsoft.java.UpgradeToJava17",
+            "name": "Upgrade from Java 8 to Java 17",
+            "description": "Migrate Java 8 to Java 17.",
+            "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava17",
+            "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.UpgradeToJava17` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 17 from any previous version larger than Java 8.\n"
+          }
+        ],
+        "supportedSources": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": ">=8 <17"
+          },
+          {
+            "name": "Java",
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "11",
+            "recipes": [
+              {
+                "id": "com.microsoft.java.UpgradeToJava11",
+                "name": "Upgrade from Java 8 to Java 11",
+                "description": "Migrate Java 8 to Java 11.",
+                "url": "https://docs.openrewrite.org/recipes/java/migrate/java8tojava11",
+                "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.Java8toJava11` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 11 from any previous version larger than Java 8.\n"
+              }
+            ],
+            "supportedSources": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": ">=8 <11"
+              }
+            ],
+            "effects": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": "11"
+              }
+            ]
+          }
+        ],
+        "effects": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "17"
+          }
+        ]
+      },
+      {
+        "name": "Spring Boot",
+        "groupId": "org.springframework.boot",
+        "artifactId": "*",
+        "version": "3.4.x",
+        "dependencies": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": ">=17 <=24"
+          }
+        ],
+        "recipes": [
+          {
+            "id": "com.microsoft.java.UpgradeToSpringBoot_3_4",
+            "name": "Upgrading from Spring Boot 3.3 to 3.4",
+            "description": "Upgrading from Spring Boot 3.3 to 3.4 using AI.",
+            "content": "- Refer to [Upgrading to Spring Boot 3.4 from 3.3](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.4-Release-Notes#upgrading-from-spring-boot-33) for more instructions about upgrading to Spring Boot 3.4 from 3.3.",
+            "url": "https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.4-Release-Notes"
+          }
+        ],
+        "supportedSources": [
+          {
+            "groupId": "org.springframework.boot",
+            "artifactId": "*",
+            "version": "3.3.x"
+          },
+          {
+            "name": "Spring Boot",
+            "groupId": "org.springframework.boot",
+            "artifactId": "*",
+            "version": "3.3.x",
+            "dependencies": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": ">=17 <=23"
+              }
+            ],
+            "recipes": [
+              {
+                "id": "com.microsoft.java.UpgradeToSpringBoot_3_3",
+                "name": "Upgrade Spring Boot to 3.3",
+                "description": "Migrate low-level to Spring Boot 3.3 directly.",
+                "url": "https://docs.openrewrite.org/recipes/java/spring/boot3/upgradespringboot_3_3",
+                "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.spring.boot3.UpgradeSpringBoot_3_3` in recipe lib `org.openrewrite.recipe:rewrite-spring:5.25.1` to make initial code changes for upgrading Spring Boot to 3.3 from any previous version.\n"
+              }
+            ],
+            "supportedSources": [
+              {
+                "groupId": "org.springframework.boot",
+                "artifactId": "*",
+                "version": "<=3.3.12"
+              },
+              {
+                "name": "Spring Boot",
+                "groupId": "org.springframework.boot",
+                "artifactId": "*",
+                "version": "2.7.x",
+                "dependencies": [
+                  {
+                    "groupId": "java",
+                    "artifactId": "*",
+                    "version": ">=8 <=21"
+                  }
+                ],
+                "recipes": [
+                  {
+                    "id": "com.microsoft.java.UpgradeToSpringBoot_2_7",
+                    "name": "Upgrade Spring Boot to 2.7",
+                    "description": "Migrate low-level to Spring Boot 2.7 directly.",
+                    "url": "https://docs.openrewrite.org/recipes/java/spring/boot2/upgradespringboot_2_7",
+                    "content": "\n-  Apply OpenRewrite recipe `org.openrewrite.java.spring.boot2.UpgradeSpringBoot_2_7` in recipe lib `org.openrewrite.recipe:rewrite-spring:5.25.1` to make initial code changes for upgrading Spring Boot to 2.7 from any previous version.\n"
+                  }
+                ],
+                "supportedSources": [
+                  {
+                    "groupId": "org.springframework.boot",
+                    "artifactId": "*",
+                    "version": "<=2.7.18"
+                  }
+                ],
+                "effects": [
+                  {
+                    "groupId": "org.springframework.boot",
+                    "artifactId": "*",
+                    "version": "2.7.x"
+                  },
+                  {
+                    "groupId": "java",
+                    "artifactId": "*",
+                    "version": "8"
+                  },
+                  {
+                    "groupId": "org.springframework",
+                    "artifactId": "*",
+                    "version": "5.3.x"
+                  }
+                ]
+              },
+              {
+                "name": "Spring Boot",
+                "groupId": "org.springframework.boot",
+                "artifactId": "*",
+                "version": "3.2.x",
+                "dependencies": [
+                  {
+                    "groupId": "java",
+                    "artifactId": "*",
+                    "version": ">=17 <=21"
+                  }
+                ],
+                "recipes": [
+                  {
+                    "id": "com.microsoft.java.UpgradeToSpringBoot_3_2",
+                    "name": "Upgrade Spring Boot to 3.2",
+                    "description": "Migrate low-level to Spring Boot 3.2 directly.",
+                    "url": "https://docs.openrewrite.org/recipes/java/spring/boot3/upgradespringboot_3_2",
+                    "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.spring.boot3.UpgradeSpringBoot_3_2` in recipe lib `org.openrewrite.recipe:rewrite-spring:5.25.1` to make initial code changes for upgrading Spring Boot to 3.2 from any previous version.\n"
+                  }
+                ],
+                "supportedSources": [
+                  {
+                    "groupId": "org.springframework.boot",
+                    "artifactId": "*",
+                    "version": "<=3.2.12"
+                  },
+                  {
+                    "name": "Spring Boot",
+                    "groupId": "org.springframework.boot",
+                    "artifactId": "*",
+                    "version": "2.7.x",
+                    "dependencies": [
+                      {
+                        "groupId": "java",
+                        "artifactId": "*",
+                        "version": ">=8 <=21"
+                      }
+                    ],
+                    "recipes": [
+                      {
+                        "id": "com.microsoft.java.UpgradeToSpringBoot_2_7",
+                        "name": "Upgrade Spring Boot to 2.7",
+                        "description": "Migrate low-level to Spring Boot 2.7 directly.",
+                        "url": "https://docs.openrewrite.org/recipes/java/spring/boot2/upgradespringboot_2_7",
+                        "content": "\n-  Apply OpenRewrite recipe `org.openrewrite.java.spring.boot2.UpgradeSpringBoot_2_7` in recipe lib `org.openrewrite.recipe:rewrite-spring:5.25.1` to make initial code changes for upgrading Spring Boot to 2.7 from any previous version.\n"
+                      }
+                    ],
+                    "supportedSources": [
+                      {
+                        "groupId": "org.springframework.boot",
+                        "artifactId": "*",
+                        "version": "<=2.7.18"
+                      }
+                    ],
+                    "effects": [
+                      {
+                        "groupId": "org.springframework.boot",
+                        "artifactId": "*",
+                        "version": "2.7.x"
+                      },
+                      {
+                        "groupId": "java",
+                        "artifactId": "*",
+                        "version": "8"
+                      },
+                      {
+                        "groupId": "org.springframework",
+                        "artifactId": "*",
+                        "version": "5.3.x"
+                      }
+                    ]
+                  }
+                ],
+                "effects": [
+                  {
+                    "groupId": "org.springframework.boot",
+                    "artifactId": "*",
+                    "version": "3.2.x"
+                  },
+                  {
+                    "groupId": "java",
+                    "artifactId": "*",
+                    "version": "17"
+                  },
+                  {
+                    "groupId": "org.springframework",
+                    "artifactId": "*",
+                    "version": "6.1.x"
+                  }
+                ]
+              }
+            ],
+            "effects": [
+              {
+                "groupId": "org.springframework.boot",
+                "artifactId": "*",
+                "version": "3.3.x"
+              },
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": "17"
+              },
+              {
+                "groupId": "org.springframework",
+                "artifactId": "*",
+                "version": "6.1.x"
+              }
+            ]
+          }
+        ],
+        "effects": [
+          {
+            "groupId": "org.springframework.boot",
+            "artifactId": "*",
+            "version": "3.4.x"
+          }
+        ]
+      }
+    ],
+    "buildTool": {
+      "name": "mvn",
+      "path": "C:\\Program Files\\Apache\\apache-maven-3.9.6\\bin",
+      "version": ""
+    }
+  },
+  "guidelines": "- Oracle-specific native SQL queries in PhotoRepository must remain functional\\n- Update Maven compiler settings from Java 8 to Java 17\\n- Migrate all javax.* namespace imports (javax.persistence, javax.validation, javax.imageio) to Jakarta EE (jakarta.*) where applicable\\n- Keep javax.imageio as-is since it is part of Java SE, not Jakarta EE\\n- Update Dockerfile to use JDK 17 base images\\n- Update Hibernate dialect references if needed for Spring Boot 3.x compatibility\\n- Update ojdbc8 to ojdbc17 for Java 17 compatibility",
+  "workingBranch": "main",
+  "runTests": true
+}
+2026-03-17T03:35:04.325Z [INFO] Project dependencies loaded: [
+  "org.springframework.boot:spring-boot-starter-web:2.7.18:jar",
+  "org.springframework.boot:spring-boot-starter-thymeleaf:2.7.18:jar",
+  "org.springframework.boot:spring-boot-starter-data-jpa:2.7.18:jar",
+  "com.oracle.database.jdbc:ojdbc8:21.5.0.0:jar",
+  "org.springframework.boot:spring-boot-starter-validation:2.7.18:jar",
+  "commons-io:commons-io:2.11.0:jar",
+  "org.springframework.boot:spring-boot-starter-json:2.7.18:jar",
+  "org.springframework.boot:spring-boot-starter-test:2.7.18:jar",
+  "com.h2database:h2:2.1.214:jar",
+  "org.springframework.boot:spring-boot-devtools:2.7.18:jar"
+]
+2026-03-17T03:35:04.326Z [INFO] Project modules loaded: [
+  "com.photoalbum:photo-album:1.0.0"
+]
+2026-03-17T03:35:04.327Z [INFO] done initializing context.
+2026-03-17T03:35:04.328Z [INFO] Source dependencies: [
+  {
+    "groupId": "org.springframework.boot",
+    "artifactId": "spring-boot-starter-web",
+    "type": "jar",
+    "version": "2.7.18",
+    "scope": "compile",
+    "module": "photo-album"
+  },
+  {
+    "groupId": "org.springframework.boot",
+    "artifactId": "spring-boot-starter-thymeleaf",
+    "type": "jar",
+    "version": "2.7.18",
+    "scope": "compile",
+    "module": "photo-album"
+  },
+  {
+    "groupId": "org.springframework.boot",
+    "artifactId": "spring-boot-starter-data-jpa",
+    "type": "jar",
+    "version": "2.7.18",
+    "scope": "compile",
+    "module": "photo-album"
+  },
+  {
+    "groupId": "com.oracle.database.jdbc",
+    "artifactId": "ojdbc8",
+    "type": "jar",
+    "version": "21.5.0.0",
+    "scope": "runtime",
+    "module": "photo-album"
+  },
+  {
+    "groupId": "org.springframework.boot",
+    "artifactId": "spring-boot-starter-validation",
+    "type": "jar",
+    "version": "2.7.18",
+    "scope": "compile",
+    "module": "photo-album"
+  },
+  {
+    "groupId": "commons-io",
+    "artifactId": "commons-io",
+    "type": "jar",
+    "version": "2.11.0",
+    "scope": "compile",
+    "module": "photo-album"
+  },
+  {
+    "groupId": "org.springframework.boot",
+    "artifactId": "spring-boot-starter-json",
+    "type": "jar",
+    "version": "2.7.18",
+    "scope": "compile",
+    "module": "photo-album"
+  },
+  {
+    "groupId": "org.springframework.boot",
+    "artifactId": "spring-boot-starter-test",
+    "type": "jar",
+    "version": "2.7.18",
+    "scope": "test",
+    "module": "photo-album"
+  },
+  {
+    "groupId": "com.h2database",
+    "artifactId": "h2",
+    "type": "jar",
+    "version": "2.1.214",
+    "scope": "test",
+    "module": "photo-album"
+  },
+  {
+    "groupId": "org.springframework.boot",
+    "artifactId": "spring-boot-devtools",
+    "type": "jar",
+    "version": "2.7.18",
+    "scope": "compile",
+    "module": "photo-album"
+  },
+  {
+    "groupId": "java",
+    "artifactId": "*",
+    "version": "8"
+  }
+]
+2026-03-17T03:35:04.329Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object]
+2026-03-17T03:35:04.330Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Spring Boot
+2026-03-17T03:35:04.331Z [WARN] No source dependencies found for Spring Framework. Skipping target dependency validation
+2026-03-17T03:35:04.332Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Spring Framework
+2026-03-17T03:35:04.332Z [WARN] No source dependencies found for Spring Security. Skipping target dependency validation
+2026-03-17T03:35:04.333Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Spring Security
+2026-03-17T03:35:04.334Z [WARN] No source dependencies found for Jakarta EE. Skipping target dependency validation
+2026-03-17T03:35:04.334Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Jakarta EE
+2026-03-17T03:35:04.335Z [WARN] No source dependencies found for JUnit. Skipping target dependency validation
+2026-03-17T03:35:04.335Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:JUnit
+2026-03-17T03:35:04.336Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Java
+2026-03-17T03:35:04.337Z [INFO] validateAndUpdateTargets, userTargets: [object Object],[object Object]
+2026-03-17T03:35:04.338Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object]
+2026-03-17T03:35:04.339Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Spring Boot
+2026-03-17T03:35:04.340Z [WARN] No source dependencies found for Spring Framework. Skipping target dependency validation
+2026-03-17T03:35:04.341Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Spring Framework
+2026-03-17T03:35:04.341Z [WARN] No source dependencies found for Spring Security. Skipping target dependency validation
+2026-03-17T03:35:04.342Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Spring Security
+2026-03-17T03:35:04.343Z [WARN] No source dependencies found for Jakarta EE. Skipping target dependency validation
+2026-03-17T03:35:04.344Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Jakarta EE
+2026-03-17T03:35:04.345Z [WARN] No source dependencies found for JUnit. Skipping target dependency validation
+2026-03-17T03:35:04.345Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:JUnit
+2026-03-17T03:35:04.346Z [INFO] validateAndUpdateTargets, targets: [object Object],[object Object], group:Java
+2026-03-17T03:35:04.346Z [INFO] validateAndUpdateTargets, userTargets: [object Object],[object Object]
+2026-03-17T03:35:04.348Z [INFO] Upgrade route: upgrade `Spring Boot` to *3.3.x*, upgrade `Java` to *17* -> upgrade `Spring Boot` to *3.4.x* with oneStepOneFramework=false
+2026-03-17T03:35:04.349Z [INFO] Upgrade route planned: [
+  [
+    {
+      "name": "Spring Boot",
+      "groupId": "org.springframework.boot",
+      "artifactId": "*",
+      "version": "3.3.x",
+      "dependencies": [
+        {
+          "groupId": "java",
+          "artifactId": "*",
+          "version": ">=17 <=23"
+        }
+      ],
+      "recipes": [
+        {
+          "id": "com.microsoft.java.UpgradeToSpringBoot_3_3",
+          "name": "Upgrade Spring Boot to 3.3",
+          "description": "Migrate low-level to Spring Boot 3.3 directly.",
+          "url": "https://docs.openrewrite.org/recipes/java/spring/boot3/upgradespringboot_3_3",
+          "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.spring.boot3.UpgradeSpringBoot_3_3` in recipe lib `org.openrewrite.recipe:rewrite-spring:5.25.1` to make initial code changes for upgrading Spring Boot to 3.3 from any previous version.\n"
+        }
+      ],
+      "supportedSources": [
+        {
+          "groupId": "org.springframework.boot",
+          "artifactId": "*",
+          "version": "<=3.3.12"
+        },
+        {
+          "name": "Spring Boot",
+          "groupId": "org.springframework.boot",
+          "artifactId": "*",
+          "version": "2.7.x",
+          "dependencies": [
+            {
+              "groupId": "java",
+              "artifactId": "*",
+              "version": ">=8 <=21"
+            }
+          ],
+          "recipes": [
+            {
+              "id": "com.microsoft.java.UpgradeToSpringBoot_2_7",
+              "name": "Upgrade Spring Boot to 2.7",
+              "description": "Migrate low-level to Spring Boot 2.7 directly.",
+              "url": "https://docs.openrewrite.org/recipes/java/spring/boot2/upgradespringboot_2_7",
+              "content": "\n-  Apply OpenRewrite recipe `org.openrewrite.java.spring.boot2.UpgradeSpringBoot_2_7` in recipe lib `org.openrewrite.recipe:rewrite-spring:5.25.1` to make initial code changes for upgrading Spring Boot to 2.7 from any previous version.\n"
+            }
+          ],
+          "supportedSources": [
+            {
+              "groupId": "org.springframework.boot",
+              "artifactId": "*",
+              "version": "<=2.7.18"
+            }
+          ],
+          "effects": [
+            {
+              "groupId": "org.springframework.boot",
+              "artifactId": "*",
+              "version": "2.7.x"
+            },
+            {
+              "groupId": "java",
+              "artifactId": "*",
+              "version": "8"
+            },
+            {
+              "groupId": "org.springframework",
+              "artifactId": "*",
+              "version": "5.3.x"
+            }
+          ]
+        },
+        {
+          "name": "Spring Boot",
+          "groupId": "org.springframework.boot",
+          "artifactId": "*",
+          "version": "3.2.x",
+          "dependencies": [
+            {
+              "groupId": "java",
+              "artifactId": "*",
+              "version": ">=17 <=21"
+            }
+          ],
+          "recipes": [
+            {
+              "id": "com.microsoft.java.UpgradeToSpringBoot_3_2",
+              "name": "Upgrade Spring Boot to 3.2",
+              "description": "Migrate low-level to Spring Boot 3.2 directly.",
+              "url": "https://docs.openrewrite.org/recipes/java/spring/boot3/upgradespringboot_3_2",
+              "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.spring.boot3.UpgradeSpringBoot_3_2` in recipe lib `org.openrewrite.recipe:rewrite-spring:5.25.1` to make initial code changes for upgrading Spring Boot to 3.2 from any previous version.\n"
+            }
+          ],
+          "supportedSources": [
+            {
+              "groupId": "org.springframework.boot",
+              "artifactId": "*",
+              "version": "<=3.2.12"
+            },
+            {
+              "name": "Spring Boot",
+              "groupId": "org.springframework.boot",
+              "artifactId": "*",
+              "version": "2.7.x",
+              "dependencies": [
+                {
+                  "groupId": "java",
+                  "artifactId": "*",
+                  "version": ">=8 <=21"
+                }
+              ],
+              "recipes": [
+                {
+                  "id": "com.microsoft.java.UpgradeToSpringBoot_2_7",
+                  "name": "Upgrade Spring Boot to 2.7",
+                  "description": "Migrate low-level to Spring Boot 2.7 directly.",
+                  "url": "https://docs.openrewrite.org/recipes/java/spring/boot2/upgradespringboot_2_7",
+                  "content": "\n-  Apply OpenRewrite recipe `org.openrewrite.java.spring.boot2.UpgradeSpringBoot_2_7` in recipe lib `org.openrewrite.recipe:rewrite-spring:5.25.1` to make initial code changes for upgrading Spring Boot to 2.7 from any previous version.\n"
+                }
+              ],
+              "supportedSources": [
+                {
+                  "groupId": "org.springframework.boot",
+                  "artifactId": "*",
+                  "version": "<=2.7.18"
+                }
+              ],
+              "effects": [
+                {
+                  "groupId": "org.springframework.boot",
+                  "artifactId": "*",
+                  "version": "2.7.x"
+                },
+                {
+                  "groupId": "java",
+                  "artifactId": "*",
+                  "version": "8"
+                },
+                {
+                  "groupId": "org.springframework",
+                  "artifactId": "*",
+                  "version": "5.3.x"
+                }
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "groupId": "org.springframework.boot",
+              "artifactId": "*",
+              "version": "3.2.x"
+            },
+            {
+              "groupId": "java",
+              "artifactId": "*",
+              "version": "17"
+            },
+            {
+              "groupId": "org.springframework",
+              "artifactId": "*",
+              "version": "6.1.x"
+            }
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "groupId": "org.springframework.boot",
+          "artifactId": "*",
+          "version": "3.3.x"
+        },
+        {
+          "groupId": "java",
+          "artifactId": "*",
+          "version": "17"
+        },
+        {
+          "groupId": "org.springframework",
+          "artifactId": "*",
+          "version": "6.1.x"
+        }
+      ]
+    },
+    {
+      "name": "Java",
+      "groupId": "java",
+      "artifactId": "*",
+      "version": "17",
+      "recipes": [
+        {
+          "id": "com.microsoft.java.UpgradeToJava17",
+          "name": "Upgrade from Java 8 to Java 17",
+          "description": "Migrate Java 8 to Java 17.",
+          "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava17",
+          "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.UpgradeToJava17` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 17 from any previous version larger than Java 8.\n"
+        }
+      ],
+      "supportedSources": [
+        {
+          "groupId": "java",
+          "artifactId": "*",
+          "version": ">=8 <17"
+        },
+        {
+          "name": "Java",
+          "groupId": "java",
+          "artifactId": "*",
+          "version": "11",
+          "recipes": [
+            {
+              "id": "com.microsoft.java.UpgradeToJava11",
+              "name": "Upgrade from Java 8 to Java 11",
+              "description": "Migrate Java 8 to Java 11.",
+              "url": "https://docs.openrewrite.org/recipes/java/migrate/java8tojava11",
+              "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.Java8toJava11` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 11 from any previous version larger than Java 8.\n"
+            }
+          ],
+          "supportedSources": [
+            {
+              "groupId": "java",
+              "artifactId": "*",
+              "version": ">=8 <11"
+            }
+          ],
+          "effects": [
+            {
+              "groupId": "java",
+              "artifactId": "*",
+              "version": "11"
+            }
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "groupId": "java",
+          "artifactId": "*",
+          "version": "17"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "name": "Spring Boot",
+      "groupId": "org.springframework.boot",
+      "artifactId": "*",
+      "version": "3.4.x",
+      "dependencies": [
+        {
+          "groupId": "java",
+          "artifactId": "*",
+          "version": ">=17 <=24"
+        }
+      ],
+      "recipes": [
+        {
+          "id": "com.microsoft.java.UpgradeToSpringBoot_3_4",
+          "name": "Upgrading from Spring Boot 3.3 to 3.4",
+          "description": "Upgrading from Spring Boot 3.3 to 3.4 using AI.",
+          "content": "- Refer to [Upgrading to Spring Boot 3.4 from 3.3](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.4-Release-Notes#upgrading-from-spring-boot-33) for more instructions about upgrading to Spring Boot 3.4 from 3.3.",
+          "url": "https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.4-Release-Notes"
+        }
+      ],
+      "supportedSources": [
+        {
+          "groupId": "org.springframework.boot",
+          "artifactId": "*",
+          "version": "3.3.x"
+        },
+        {
+          "name": "Spring Boot",
+          "groupId": "org.springframework.boot",
+          "artifactId": "*",
+          "version": "3.3.x",
+          "dependencies": [
+            {
+              "groupId": "java",
+              "artifactId": "*",
+              "version": ">=17 <=23"
+            }
+          ],
+          "recipes": [
+            {
+              "id": "com.microsoft.java.UpgradeToSpringBoot_3_3",
+              "name": "Upgrade Spring Boot to 3.3",
+              "description": "Migrate low-level to Spring Boot 3.3 directly.",
+              "url": "https://docs.openrewrite.org/recipes/java/spring/boot3/upgradespringboot_3_3",
+              "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.spring.boot3.UpgradeSpringBoot_3_3` in recipe lib `org.openrewrite.recipe:rewrite-spring:5.25.1` to make initial code changes for upgrading Spring Boot to 3.3 from any previous version.\n"
+            }
+          ],
+          "supportedSources": [
+            {
+              "groupId": "org.springframework.boot",
+              "artifactId": "*",
+              "version": "<=3.3.12"
+            },
+            {
+              "name": "Spring Boot",
+              "groupId": "org.springframework.boot",
+              "artifactId": "*",
+              "version": "2.7.x",
+              "dependencies": [
+                {
+                  "groupId": "java",
+                  "artifactId": "*",
+                  "version": ">=8 <=21"
+                }
+              ],
+              "recipes": [
+                {
+                  "id": "com.microsoft.java.UpgradeToSpringBoot_2_7",
+                  "name": "Upgrade Spring Boot to 2.7",
+                  "description": "Migrate low-level to Spring Boot 2.7 directly.",
+                  "url": "https://docs.openrewrite.org/recipes/java/spring/boot2/upgradespringboot_2_7",
+                  "content": "\n-  Apply OpenRewrite recipe `org.openrewrite.java.spring.boot2.UpgradeSpringBoot_2_7` in recipe lib `org.openrewrite.recipe:rewrite-spring:5.25.1` to make initial code changes for upgrading Spring Boot to 2.7 from any previous version.\n"
+                }
+              ],
+              "supportedSources": [
+                {
+                  "groupId": "org.springframework.boot",
+                  "artifactId": "*",
+                  "version": "<=2.7.18"
+                }
+              ],
+              "effects": [
+                {
+                  "groupId": "org.springframework.boot",
+                  "artifactId": "*",
+                  "version": "2.7.x"
+                },
+                {
+                  "groupId": "java",
+                  "artifactId": "*",
+                  "version": "8"
+                },
+                {
+                  "groupId": "org.springframework",
+                  "artifactId": "*",
+                  "version": "5.3.x"
+                }
+              ]
+            },
+            {
+              "name": "Spring Boot",
+              "groupId": "org.springframework.boot",
+              "artifactId": "*",
+              "version": "3.2.x",
+              "dependencies": [
+                {
+                  "groupId": "java",
+                  "artifactId": "*",
+                  "version": ">=17 <=21"
+                }
+              ],
+              "recipes": [
+                {
+                  "id": "com.microsoft.java.UpgradeToSpringBoot_3_2",
+                  "name": "Upgrade Spring Boot to 3.2",
+                  "description": "Migrate low-level to Spring Boot 3.2 directly.",
+                  "url": "https://docs.openrewrite.org/recipes/java/spring/boot3/upgradespringboot_3_2",
+                  "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.spring.boot3.UpgradeSpringBoot_3_2` in recipe lib `org.openrewrite.recipe:rewrite-spring:5.25.1` to make initial code changes for upgrading Spring Boot to 3.2 from any previous version.\n"
+                }
+              ],
+              "supportedSources": [
+                {
+                  "groupId": "org.springframework.boot",
+                  "artifactId": "*",
+                  "version": "<=3.2.12"
+                },
+                {
+                  "name": "Spring Boot",
+                  "groupId": "org.springframework.boot",
+                  "artifactId": "*",
+                  "version": "2.7.x",
+                  "dependencies": [
+                    {
+                      "groupId": "java",
+                      "artifactId": "*",
+                      "version": ">=8 <=21"
+                    }
+                  ],
+                  "recipes": [
+                    {
+                      "id": "com.microsoft.java.UpgradeToSpringBoot_2_7",
+                      "name": "Upgrade Spring Boot to 2.7",
+                      "description": "Migrate low-level to Spring Boot 2.7 directly.",
+                      "url": "https://docs.openrewrite.org/recipes/java/spring/boot2/upgradespringboot_2_7",
+                      "content": "\n-  Apply OpenRewrite recipe `org.openrewrite.java.spring.boot2.UpgradeSpringBoot_2_7` in recipe lib `org.openrewrite.recipe:rewrite-spring:5.25.1` to make initial code changes for upgrading Spring Boot to 2.7 from any previous version.\n"
+                    }
+                  ],
+                  "supportedSources": [
+                    {
+                      "groupId": "org.springframework.boot",
+                      "artifactId": "*",
+                      "version": "<=2.7.18"
+                    }
+                  ],
+                  "effects": [
+                    {
+                      "groupId": "org.springframework.boot",
+                      "artifactId": "*",
+                      "version": "2.7.x"
+                    },
+                    {
+                      "groupId": "java",
+                      "artifactId": "*",
+                      "version": "8"
+                    },
+                    {
+                      "groupId": "org.springframework",
+                      "artifactId": "*",
+                      "version": "5.3.x"
+                    }
+                  ]
+                }
+              ],
+              "effects": [
+                {
+                  "groupId": "org.springframework.boot",
+                  "artifactId": "*",
+                  "version": "3.2.x"
+                },
+                {
+                  "groupId": "java",
+                  "artifactId": "*",
+                  "version": "17"
+                },
+                {
+                  "groupId": "org.springframework",
+                  "artifactId": "*",
+                  "version": "6.1.x"
+                }
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "groupId": "org.springframework.boot",
+              "artifactId": "*",
+              "version": "3.3.x"
+            },
+            {
+              "groupId": "java",
+              "artifactId": "*",
+              "version": "17"
+            },
+            {
+              "groupId": "org.springframework",
+              "artifactId": "*",
+              "version": "6.1.x"
+            }
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "groupId": "org.springframework.boot",
+          "artifactId": "*",
+          "version": "3.4.x"
+        }
+      ]
+    }
+  ]
+]
+2026-03-17T03:35:04.428Z [INFO] Upgrade plan written to C:\Users\yueli6\Desktop\PhotoAlbum-Java\.github\java-upgrade\20260317033407\plan.md

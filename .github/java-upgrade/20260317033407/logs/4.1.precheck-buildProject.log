@@ -1,0 +1,7 @@
+2026-03-17T03:35:26.424Z [INFO] [MavenBuildTool] Getting build errors of C:\Users\yueli6\Desktop\PhotoAlbum-Java using Maven
+2026-03-17T03:35:26.425Z [INFO] [Environment] Running command (Java 8): mvn clean test-compile -q -B -fn
+2026-03-17T03:35:39.482Z [INFO] [MavenBuildTool] parsing compilation errors.
+2026-03-17T03:35:39.484Z [INFO] [BaseBuildTool] Found 1 modules: .
+2026-03-17T03:35:39.497Z [INFO] [BaseBuildTool] Finish counting Java and class files
+2026-03-17T03:35:39.498Z [INFO] [MavenBuildTool] Cleaning C:\Users\yueli6\Desktop\PhotoAlbum-Java using Maven
+2026-03-17T03:35:39.499Z [INFO] [Environment] Running command (Java 8): mvn clean -q -B -fn

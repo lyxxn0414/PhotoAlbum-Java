@@ -1,0 +1,145 @@
+2026-03-17T03:35:26.420Z [INFO] Prechecking project PhotoAlbum-Java...
+2026-03-17T03:35:26.421Z [INFO] Prechecking build status...
+2026-03-17T03:35:41.233Z [INFO] Prechecking CVEs...
+2026-03-17T03:35:42.172Z [INFO] Prechecking tests...
+2026-03-17T03:35:42.173Z [INFO] Run tests before upgrading...
+2026-03-17T03:36:04.336Z [INFO] Prepare initial state...
+2026-03-17T03:36:04.336Z [INFO] [Project PhotoAlbum-Java]: getting project state.
+2026-03-17T03:36:04.337Z [INFO] [Project PhotoAlbum-Java]: getting Java version.
+2026-03-17T03:36:04.338Z [INFO] [Project PhotoAlbum-Java]: got Java version: 8
+2026-03-17T03:36:04.340Z [INFO] [Project PhotoAlbum-Java]: getting dependencies promise.
+2026-03-17T03:36:04.342Z [INFO] Project initial state: {
+  "javaVersion": "8",
+  "dependencies": [
+    {
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-web",
+      "type": "jar",
+      "version": "2.7.18",
+      "scope": "compile",
+      "module": "photo-album"
+    },
+    {
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-thymeleaf",
+      "type": "jar",
+      "version": "2.7.18",
+      "scope": "compile",
+      "module": "photo-album"
+    },
+    {
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-data-jpa",
+      "type": "jar",
+      "version": "2.7.18",
+      "scope": "compile",
+      "module": "photo-album"
+    },
+    {
+      "groupId": "com.oracle.database.jdbc",
+      "artifactId": "ojdbc8",
+      "type": "jar",
+      "version": "21.5.0.0",
+      "scope": "runtime",
+      "module": "photo-album"
+    },
+    {
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-validation",
+      "type": "jar",
+      "version": "2.7.18",
+      "scope": "compile",
+      "module": "photo-album"
+    },
+    {
+      "groupId": "commons-io",
+      "artifactId": "commons-io",
+      "type": "jar",
+      "version": "2.11.0",
+      "scope": "compile",
+      "module": "photo-album"
+    },
+    {
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-json",
+      "type": "jar",
+      "version": "2.7.18",
+      "scope": "compile",
+      "module": "photo-album"
+    },
+    {
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-test",
+      "type": "jar",
+      "version": "2.7.18",
+      "scope": "test",
+      "module": "photo-album"
+    },
+    {
+      "groupId": "com.h2database",
+      "artifactId": "h2",
+      "type": "jar",
+      "version": "2.1.214",
+      "scope": "test",
+      "module": "photo-album"
+    },
+    {
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-devtools",
+      "type": "jar",
+      "version": "2.7.18",
+      "scope": "compile",
+      "module": "photo-album"
+    },
+    {
+      "groupId": "java",
+      "artifactId": "*",
+      "version": "8"
+    }
+  ],
+  "buildResult": {
+    "numOfJavaFiles": 11,
+    "numOfClassFiles": 11,
+    "modulesBuildResult": {
+      ".": {
+        "numOfJavaFiles": 11,
+        "numOfClassFiles": 11
+      }
+    },
+    "errors": [],
+    "command": "mvn clean test-compile -q -B -fn"
+  },
+  "testResult": {
+    "errors": [],
+    "failures": [],
+    "summary": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "reports": [
+      {
+        "name": "com.photoalbum.PhotoAlbumApplicationTests",
+        "time": 6.695,
+        "tests": 1,
+        "errors": 0,
+        "skipped": 0,
+        "failures": 0,
+        "testcases": [
+          {
+            "name": "contextLoads",
+            "classname": "com.photoalbum.PhotoAlbumApplicationTests",
+            "time": 0.127,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          }
+        ]
+      }
+    ]
+  }
+}
