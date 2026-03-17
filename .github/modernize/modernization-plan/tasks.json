@@ -44,8 +44,8 @@
       "description": "Deploy the containerized PhotoAlbum application to Azure Container Apps",
       "requirements": "Deploy the PhotoAlbum application to Azure Container Apps. Create the necessary Azure resources including a Container Apps Environment and Container App. Configure the application with appropriate resource limits and ingress settings for the web application running on port 8080.",
       "environmentConfiguration": null,
-      "status": "started",
-      "taskSummary": "",
+      "status": "success",
+      "taskSummary": "Successfully deployed PhotoAlbum to Azure Container Apps in eastus2. Provisioned Container App, Container Apps Environment, Azure Container Registry, User-Assigned Managed Identity, Log Analytics Workspace, and Application Insights. App accessible at https://azcarcxcvnmqgyxsk.bravepond-d715ed99.eastus2.azurecontainerapps.io. Created Bicep IaC files in infra/, added azure Spring profile with H2 in-memory database (Oracle compatibility mode). Auto-scaling configured 1-3 replicas.",
       "targetAzureService": "Azure Container Apps",
       "resourceStatus": "will create new service",
       "deploymentTool": "bicep"
