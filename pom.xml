@@ -79,11 +79,11 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- H2 Database for testing -->
+        <!-- H2 Database for testing and Azure deployment -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <scope>test</scope>
+            <scope>runtime</scope>
         </dependency>
 
         <!-- DevTools for development -->
