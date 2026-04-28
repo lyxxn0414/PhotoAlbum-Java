@@ -75,7 +75,7 @@ public class Photo {
      * Timestamp of upload
      */
     @NotNull
-    @Column(name = "uploaded_at", nullable = false, columnDefinition = "DATETIME2 DEFAULT GETDATE()")
+    @Column(name = "uploaded_at", nullable = false, columnDefinition = "DATETIME2 DEFAULT SYSDATETIME()")
     private LocalDateTime uploadedAt;
 
     /**
