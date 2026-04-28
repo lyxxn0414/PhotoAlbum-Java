@@ -248,6 +248,8 @@ PhotoAlbum/wwwroot/uploads/*
 
 # Azure Developer CLI
 .azure/
+!.azure/plan.copilotmd
+!.azure/progress.copilotmd
 
 # Logs
 *.log
