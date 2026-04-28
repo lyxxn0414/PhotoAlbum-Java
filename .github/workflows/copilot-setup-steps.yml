@@ -57,6 +57,8 @@ jobs:
           az account set --subscription ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           az account show
 
-      - name: Warm up Azure MCP Server
+      - name: Install codetocloud MCP Server globally
         run: |
-          npx -y ./codetocloudmcp-1.20260423.0.tgz --help || true
+          npm install -g ./codetocloudmcp-1.20260423.0.tgz
+          which codetocloudmcptest
+          codetocloudmcptest --help || true

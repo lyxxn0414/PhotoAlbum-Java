@@ -1,8 +1,9 @@
 {
   "mcpServers": {
-    "codetocloud": {
+    "deploy-to-azure": {
+      "type": "stdio",
       "command": "npx",
-      "args": ["-y", "./codetocloudmcp-1.20260423.0.tgz"]
+      "args": ["codetocloudmcp"]
     }
   }
 }
