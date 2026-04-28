@@ -1,15 +1,9 @@
 {
   "mcpServers": {
-    "EXAMPLE-trello": {
+    "deploy-to-azure": {
+      "type": "stdio",
       "command": "npx",
-      "args": [
-        "-y",
-        "@trello/mcp-server"
-      ],
-      "env": {
-        "TRELLO_API_KEY": "${TRELLO_API_KEY}",
-        "TRELLO_TOKEN": "${TRELLO_TOKEN}"
-      }
+      "args": ["codetocloudmcp"]
     }
   }
 }
