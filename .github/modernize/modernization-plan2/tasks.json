@@ -18,7 +18,13 @@
           "location": "builtin"
         }
       ],
-      "status": "completed"
+      "status": "success",
+      "taskSummary": "Successfully generated all deployment artifacts for deploying Photo Album to Azure Container Apps. Generated Bicep IaC files (main.bicep + 6 modules for Log Analytics, Managed Identity, ACR, SQL Server, ACA Environment, Container App), deployment scripts (deploy.sh and deploy.ps1), and documentation. The infrastructure uses Managed Identity for passwordless auth, autoscaling (1-3 replicas), and health probes on /actuator/health. All Bicep files passed az bicep build validation.",
+      "successCriteriaStatus": {
+        "passBuild": "true",
+        "generateNewUnitTests": "false",
+        "passUnitTests": "true"
+      }
     }
   ],
   "metadata": {
