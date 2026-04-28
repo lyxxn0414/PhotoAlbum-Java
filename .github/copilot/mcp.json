@@ -2,7 +2,7 @@
   "mcpServers": {
     "codetocloud": {
       "command": "npx",
-      "args": ["-y", "codetocloud-language-model-tools@1.20260423.0"]
+      "args": ["-y", "./codetocloudmcp-1.20260423.0.tgz"]
     }
   }
 }
