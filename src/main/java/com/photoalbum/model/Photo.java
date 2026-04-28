@@ -34,7 +34,7 @@ public class Photo {
     private String originalFileName;
 
     /**
-     * Binary photo data stored directly in Oracle database
+     * Binary photo data stored directly in Azure SQL database
      */
     @Lob
     @Column(name = "photo_data", nullable = true)
@@ -60,7 +60,7 @@ public class Photo {
      */
     @NotNull
     @Positive
-    @Column(name = "file_size", nullable = false, columnDefinition = "NUMBER(19,0)")
+    @Column(name = "file_size", nullable = false, columnDefinition = "BIGINT")
     private Long fileSize;
 
     /**
@@ -75,7 +75,7 @@ public class Photo {
      * Timestamp of upload
      */
     @NotNull
-    @Column(name = "uploaded_at", nullable = false, columnDefinition = "TIMESTAMP DEFAULT SYSTIMESTAMP")
+    @Column(name = "uploaded_at", nullable = false, columnDefinition = "DATETIME2 DEFAULT GETDATE()")
     private LocalDateTime uploadedAt;
 
     /**

@@ -1,6 +1,6 @@
-# Photo Album Application - Java Spring Boot with Oracle DB
+# Photo Album Application - Java Spring Boot with Azure SQL Database
 
-A photo gallery application built with Spring Boot and Oracle Database, featuring drag-and-drop upload, responsive gallery view, and full-size photo details with navigation.
+A photo gallery application built with Spring Boot and Azure SQL Database, featuring drag-and-drop upload, responsive gallery view, and full-size photo details with navigation.
 
 ## Features
 
@@ -10,14 +10,14 @@ A photo gallery application built with Spring Boot and Oracle Database, featurin
 - 📊 **Metadata Display**: View file size, dimensions, aspect ratio, and upload timestamp
 - ⬅️➡️ **Photo Navigation**: Previous/Next buttons to browse through photos
 - ✅ **Validation**: File type and size validation (JPEG, PNG, GIF, WebP; max 10MB)
-- 🗄️ **Database Storage**: Photo data stored as BLOBs in Oracle Database
+- 🗄️ **Database Storage**: Photo data stored as BLOBs in Azure SQL Database
 - 🗑️ **Delete Photos**: Remove photos from both gallery and detail views
 - 🎨 **Modern UI**: Clean, responsive design with Bootstrap 5
 
 ## Technology Stack
 
-- **Framework**: Spring Boot 2.7.18 (Java 8)
-- **Database**: Oracle Database 21c Express Edition
+- **Framework**: Spring Boot 3.4.4 (Java 17)
+- **Database**: Azure SQL Database (SQL Server compatible)
 - **Templating**: Thymeleaf
 - **Build Tool**: Maven
 - **Frontend**: Bootstrap 5.3.0, Vanilla JavaScript
@@ -27,7 +27,7 @@ A photo gallery application built with Spring Boot and Oracle Database, featurin
 
 - Docker Desktop installed and running
 - Docker Compose (included with Docker Desktop)
-- Minimum 4GB RAM available for Oracle DB container
+- Minimum 2GB RAM available for SQL Server container
 
 ## Quick Start
 
@@ -44,14 +44,14 @@ A photo gallery application built with Spring Boot and Oracle Database, featurin
    ```
 
    This will:
-   - Start Oracle Database 21c Express Edition container
+   - Start Azure SQL Edge container (SQL Server compatible)
    - Build the Java Spring Boot application
    - Start the Photo Album application container
    - Automatically create the database schema using JPA/Hibernate
 
 3. **Wait for services to start**:
-   - Oracle DB takes 2-3 minutes to initialize on first run
-   - Application will start once Oracle is healthy
+   - SQL Server takes about 1 minute to initialize on first run
+   - Application will start once SQL Server is healthy
 
 4. **Access the application**:
    - Open your browser and navigate to: **http://localhost:8080**
@@ -59,20 +59,18 @@ A photo gallery application built with Spring Boot and Oracle Database, featurin
 
 ## Services
 
-## Oracle Database
-- **Image**: `container-registry.oracle.com/database/express:21.3.0-xe`
+## Azure SQL Database
+- **Image**: `mcr.microsoft.com/azure-sql-edge:latest`
 - **Ports**: 
-  - `1521` (database) - mapped to host port 1521
-  - `5500` (Enterprise Manager) - mapped to host port 5500
-- **Database**: `XE` (Express Edition)
-- **Schema**: `photoalbum`
-- **Username/Password**: `photoalbum/photoalbum`
+  - `1433` (database) - mapped to host port 1433
+- **Database**: `photoalbum`
+- **Username/Password**: `sa/PhotoAlbum@123`
 
 ## Photo Album Java Application
 - **Port**: `8080` (mapped to host port 8080)
-- **Framework**: Spring Boot 2.7.18
-- **Java Version**: 8
-- **Database**: Connects to Oracle container
+- **Framework**: Spring Boot 3.4.4
+- **Java Version**: 17
+- **Database**: Connects to Azure SQL Database container
 - **Photo Storage**: All photos stored as BLOBs in database (no file system storage)
 - **UUID System**: Each photo gets a globally unique identifier for cache-busting
 
@@ -81,24 +79,24 @@ A photo gallery application built with Spring Boot and Oracle Database, featurin
 The application uses Spring Data JPA with Hibernate for automatic schema management:
 
 1. **Automatic Schema Creation**: Hibernate automatically creates tables and indexes
-2. **User Creation**: Oracle init scripts create the `photoalbum` user
+2. **Database Creation**: The photoalbum database is created automatically
 3. **No Manual Setup Required**: Everything is handled automatically
 
 ### Database Schema
 
-The application creates the following table structure in Oracle:
+The application creates the following table structure in Azure SQL Database:
 
 #### PHOTOS Table
-- `ID` (VARCHAR2(36), Primary Key, UUID Generated)
-- `ORIGINAL_FILE_NAME` (VARCHAR2(255), Not Null)
-- `STORED_FILE_NAME` (VARCHAR2(255), Not Null)
-- `FILE_PATH` (VARCHAR2(500), Nullable)
-- `FILE_SIZE` (NUMBER, Not Null)
-- `MIME_TYPE` (VARCHAR2(50), Not Null)
-- `UPLOADED_AT` (TIMESTAMP, Not Null, Default SYSTIMESTAMP)
-- `WIDTH` (NUMBER, Nullable)
-- `HEIGHT` (NUMBER, Nullable)
-- `PHOTO_DATA` (BLOB, Not Null)
+- `ID` (VARCHAR(36), Primary Key, UUID Generated)
+- `ORIGINAL_FILE_NAME` (VARCHAR(255), Not Null)
+- `STORED_FILE_NAME` (VARCHAR(255), Not Null)
+- `FILE_PATH` (VARCHAR(500), Nullable)
+- `FILE_SIZE` (BIGINT, Not Null)
+- `MIME_TYPE` (VARCHAR(50), Not Null)
+- `UPLOADED_AT` (DATETIME2, Not Null, Default GETDATE())
+- `WIDTH` (INT, Nullable)
+- `HEIGHT` (INT, Nullable)
+- `PHOTO_DATA` (VARBINARY(MAX), Not Null)
 
 #### Indexes
 - `IDX_PHOTOS_UPLOADED_AT` (Index on UPLOADED_AT for chronological queries)
@@ -111,7 +109,7 @@ The application creates the following table structure in Oracle:
 ## Storage Architecture
 
 ### Database BLOB Storage (Current Implementation)
-- **Photos**: Stored as BLOB data directly in the database
+- **Photos**: Stored as VARBINARY(MAX) data directly in the database
 - **Benefits**: 
   - No file system dependencies
   - ACID compliance for photo operations
@@ -123,17 +121,16 @@ The application creates the following table structure in Oracle:
 
 ### Running Locally (without Docker)
 
-1. **Install Oracle Database** (or use Oracle XE)
-2. **Create database user**:
+1. **Install SQL Server** (or use Azure SQL Database)
+2. **Create database**:
    ```sql
-   CREATE USER photoalbum IDENTIFIED BY photoalbum;
-   GRANT CONNECT, RESOURCE, DBA TO photoalbum;
+   CREATE DATABASE photoalbum;
    ```
 3. **Update application.properties**:
    ```properties
-   spring.datasource.url=jdbc:oracle:thin:@localhost:1521:XE
-   spring.datasource.username=photoalbum
-   spring.datasource.password=photoalbum
+   spring.datasource.url=jdbc:sqlserver://localhost:1433;database=photoalbum;encrypt=true;trustServerCertificate=true
+   spring.datasource.username=sa
+   spring.datasource.password=YourPassword@123
    spring.jpa.hibernate.ddl-auto=create
    ```
 4. **Run the application**:
@@ -153,26 +150,26 @@ java -jar target/photo-album-1.0.0.jar
 
 ## Troubleshooting
 
-### Oracle Database Issues
+### Azure SQL Database Issues
 
-1. **Oracle container won't start**:
+1. **SQL Server container won't start**:
    ```bash
    # Check container logs
-   docker-compose logs oracle-db
+   docker-compose logs sqlserver-db
    
-   # Increase Docker memory allocation to at least 4GB
+   # Increase Docker memory allocation to at least 2GB
    ```
 
 2. **Database connection errors**:
    ```bash
-   # Verify Oracle is ready
-   docker exec -it photoalbum-oracle sqlplus photoalbum/photoalbum@//localhost:1521/XE
+   # Verify SQL Server is ready
+   docker exec -it photoalbum-sqlserver /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P PhotoAlbum@123 -Q "SELECT 1"
    ```
 
 3. **Permission errors**:
    ```bash
-   # Check Oracle init scripts ran
-   docker-compose logs oracle-db | grep "setup"
+   # Check SQL Server logs
+   docker-compose logs sqlserver-db
    ```
 
 ### Application Issues
@@ -203,26 +200,19 @@ docker-compose down
 docker-compose down -v
 ```
 
-## Enterprise Manager (Optional)
-
-Oracle Enterprise Manager is available at `http://localhost:5500/em` for database administration:
-- **Username**: `system`
-- **Password**: `photoalbum`
-- **Container**: `XE`
-
 ## Performance Notes
 
-- Oracle XE has limitations (max 2 CPU threads, 2GB RAM, 12GB storage)
+- Azure SQL Edge is lightweight and suitable for development containers
 - BLOB storage in database impacts performance at scale
 - Suitable for development and small-scale deployments
+- For production, consider Azure SQL Database managed service
 
 ## Project Structure
 
 ```
 PhotoAlbum/
 ├── src/                             # Java source code
-├── oracle-init/                     # Oracle initialization scripts
-├── docker-compose.yml               # Oracle + Application services
+├── docker-compose.yml               # SQL Server + Application services
 ├── Dockerfile                       # Application container build
 ├── pom.xml                          # Maven dependencies and build config
 └── README.md                        # Project documentation

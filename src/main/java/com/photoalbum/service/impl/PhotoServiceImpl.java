@@ -139,7 +139,7 @@ public class PhotoServiceImpl implements PhotoService {
             // Create photo entity with database BLOB storage
             Photo photo = new Photo(
                 file.getOriginalFilename(),
-                photoData,  // Store actual photo data in Oracle database
+                photoData,  // Store actual photo data in Azure SQL database
                 storedFileName,
                 relativePath, // Keep for compatibility, not used for serving
                 file.getSize(),
@@ -155,10 +155,10 @@ public class PhotoServiceImpl implements PhotoService {
                 result.setSuccess(true);
                 result.setPhotoId(photo.getId());
 
-                logger.info("Successfully uploaded photo {} with ID {} to Oracle database", 
+                logger.info("Successfully uploaded photo {} with ID {} to Azure SQL database", 
                     file.getOriginalFilename(), photo.getId());
             } catch (Exception ex) {
-                logger.error("Error saving photo to Oracle database for {}", file.getOriginalFilename(), ex);
+                logger.error("Error saving photo to Azure SQL database for {}", file.getOriginalFilename(), ex);
                 result.setSuccess(false);
                 result.setErrorMessage("Error saving photo to database. Please try again.");
             }
@@ -185,13 +185,13 @@ public class PhotoServiceImpl implements PhotoService {
 
             Photo photo = photoOpt.get();
 
-            // Delete from Oracle database (photos stored as BLOB)
+            // Delete from Azure SQL database (photos stored as BLOB)
             photoRepository.delete(photo);
 
-            logger.info("Successfully deleted photo ID {} from Oracle database", id);
+            logger.info("Successfully deleted photo ID {} from Azure SQL database", id);
             return true;
         } catch (Exception ex) {
-            logger.error("Error deleting photo with ID {} from Oracle database", id, ex);
+            logger.error("Error deleting photo with ID {} from Azure SQL database", id, ex);
             throw new RuntimeException("Error deleting photo", ex);
         }
     }
