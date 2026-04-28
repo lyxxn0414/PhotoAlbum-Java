@@ -1,0 +1,22 @@
+[
+  {
+    "file": "pom.xml",
+    "description": "Added Spring Cloud Azure BOM (5.22.0) for dependency management and spring-cloud-azure-starter dependency for Managed Identity support. Updated H2 comment from 'testing and Azure deployment' to 'testing'. The BOM version 5.22.0 is compatible with Spring Boot 3.4.4 (requires >= 5.22.0 and < 7.0.0 for Spring Boot 3.x). The spring-cloud-azure-starter dependency is correctly added without an explicit version, inheriting it from the BOM. All changes follow the knowledge base guidance.",
+    "issues": []
+  },
+  {
+    "file": "src/main/resources/application-azure.properties",
+    "description": "Migrated Azure deployment profile from H2 in-memory database to Azure SQL Database with Managed Identity authentication. Replaced H2 datasource URL, driver, and dialect with Azure SQL equivalents. Removed username and password properties. Added spring.cloud.azure.credential.managed-identity-enabled and client-id configuration. The JDBC URL correctly includes 'authentication=ActiveDirectoryMSI' as required by the knowledge base. All changes are consistent with the migration-mi-azure-sql guidance.",
+    "issues": []
+  },
+  {
+    "file": "src/main/resources/application.properties",
+    "description": "Migrated default profile from password-based Azure SQL Database connection to Managed Identity authentication. Replaced localhost SQL Server connection with parameterized Azure SQL URL using environment variables (DATABASE_SERVER_HOST_NAME, DATABASE_NAME). Removed username and password. Added Managed Identity configuration properties. The JDBC URL correctly includes 'authentication=ActiveDirectoryMSI'. Changes follow the knowledge base guidance for removing password-based auth and adding MI configuration.",
+    "issues": [
+      {
+        "severity": "Minor",
+        "description": "The default profile (application.properties) now requires environment variables (DATABASE_SERVER_HOST_NAME, DATABASE_NAME, AZURE_MANAGED_IDENTITY_CLIENT_ID) and Managed Identity authentication, which will not work in local development without Azure MI. While the docker profile still supports local development with credentials, the test profile (application-test.properties) does not override spring.cloud.azure.credential.managed-identity-enabled or spring.cloud.azure.credential.client-id. If the AZURE_MANAGED_IDENTITY_CLIENT_ID environment variable is not set during tests, Spring Boot may fail to resolve the placeholder, potentially causing test startup failures. Consider adding spring.cloud.azure.credential.managed-identity-enabled=false to application-test.properties to disable MI during tests."
+      }
+    ]
+  }
+]

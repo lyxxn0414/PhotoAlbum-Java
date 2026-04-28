@@ -25,7 +25,20 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring-cloud-azure.version>5.22.0</spring-cloud-azure.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.azure.spring</groupId>
+                <artifactId>spring-cloud-azure-dependencies</artifactId>
+                <version>${spring-cloud-azure.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <!-- Spring Boot Web Starter -->
@@ -51,6 +64,12 @@
             <groupId>com.microsoft.sqlserver</groupId>
             <artifactId>mssql-jdbc</artifactId>
             <scope>runtime</scope>
+        </dependency>
+
+        <!-- Spring Cloud Azure Starter for Managed Identity -->
+        <dependency>
+            <groupId>com.azure.spring</groupId>
+            <artifactId>spring-cloud-azure-starter</artifactId>
         </dependency>
 
         <!-- Spring Boot Validation -->
@@ -79,7 +98,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- H2 Database for testing and Azure deployment -->
+        <!-- H2 Database for testing -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
