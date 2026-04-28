@@ -1,0 +1,72 @@
+[
+  {
+    "file": "pom.xml",
+    "description": "Replaced Oracle JDBC driver (ojdbc11) with Microsoft JDBC Driver for SQL Server (mssql-jdbc). Updated project description. Both changes are correct and functionally equivalent for the Oracle-to-Azure-SQL migration.",
+    "issues": []
+  },
+  {
+    "file": "src/main/java/com/photoalbum/repository/PhotoRepository.java",
+    "description": "Rewrote all Oracle-specific native SQL queries to Azure SQL compatible syntax: replaced ROWNUM with OFFSET/FETCH, NVL with ISNULL, TO_CHAR with YEAR()/MONTH()/CAST, and simplified subquery-based pagination. Window functions (RANK, SUM OVER) retained with only alias casing changes.",
+    "issues": [
+      {
+        "severity": "Minor",
+        "description": "Method findPhotosWithPagination changed parameter semantics from 1-based (startRow, endRow) to 0-based (offset, pageSize). The original API contract returned rows from startRow to endRow (1-based inclusive), while the new contract skips 'offset' rows and returns 'pageSize' rows. No callers exist in the current codebase, so there is no runtime impact, but any future or external callers relying on the old signature would need to adapt."
+      }
+    ]
+  },
+  {
+    "file": "src/main/java/com/photoalbum/model/Photo.java",
+    "description": "Updated column definitions from Oracle types to Azure SQL types: NUMBER(19,0) to BIGINT, TIMESTAMP DEFAULT SYSTIMESTAMP to DATETIME2 DEFAULT GETDATE(). Updated comments from Oracle to Azure SQL references.",
+    "issues": [
+      {
+        "severity": "Minor",
+        "description": "Column 'uploaded_at' uses DATETIME2 DEFAULT GETDATE(). GETDATE() returns datetime precision (3.33ms), while SYSDATETIME() would be more appropriate for DATETIME2 to preserve full precision (100ns). The original Oracle SYSTIMESTAMP had microsecond precision. Functionally equivalent for most use cases but there is a minor precision reduction."
+      }
+    ]
+  },
+  {
+    "file": "src/main/resources/application.properties",
+    "description": "Migrated from Oracle JDBC connection (jdbc:oracle:thin) to SQL Server JDBC connection (jdbc:sqlserver). Updated driver class from OracleDriver to SQLServerDriver and dialect from OracleDialect to SQLServerDialect. All changes are correct.",
+    "issues": []
+  },
+  {
+    "file": "src/main/resources/application-docker.properties",
+    "description": "Migrated Docker profile from Oracle to Azure SQL Database configuration. Updated JDBC URL, driver, and dialect. Removed duplicate app.file-upload configuration entries that existed in the original. Changed credentials from dedicated 'photoalbum' user to 'sa' system administrator.",
+    "issues": [
+      {
+        "severity": "Minor",
+        "description": "Changed from a dedicated 'photoalbum' database user to 'sa' (SQL Server system administrator). The original Oracle setup used a dedicated user with specific grants. Using 'sa' provides maximum privileges which is acceptable for local Docker development but deviates from the principle of least privilege. Consider creating a dedicated SQL Server user with limited permissions for better security isolation."
+      }
+    ]
+  },
+  {
+    "file": "src/main/resources/application-azure.properties",
+    "description": "Updated H2 compatibility mode from Oracle to MSSQLServer. This ensures H2 in-memory database emulates SQL Server behavior for the Azure deployment profile. Change is correct.",
+    "issues": []
+  },
+  {
+    "file": "src/test/resources/application-test.properties",
+    "description": "Added MODE=MSSQLServer to H2 in-memory database URL for test profile, ensuring test queries use SQL Server compatible syntax. Change is correct.",
+    "issues": []
+  },
+  {
+    "file": "docker-compose.yml",
+    "description": "Replaced Oracle Database container (gvenzl/oracle-free) with Azure SQL Edge container (mcr.microsoft.com/azure-sql-edge). Updated ports from 1521 to 1433, environment variables, healthcheck command, and volume configuration. Reduced start_period from 180s to 60s reflecting SQL Edge's faster startup. All changes are correct.",
+    "issues": []
+  },
+  {
+    "file": "src/main/java/com/photoalbum/controller/PhotoFileController.java",
+    "description": "Updated comments and log messages from 'Oracle database' to 'Azure SQL database'. No functional code changes. All changes are cosmetic and correct.",
+    "issues": []
+  },
+  {
+    "file": "src/main/java/com/photoalbum/service/impl/PhotoServiceImpl.java",
+    "description": "Updated comments and log messages from 'Oracle database' to 'Azure SQL database'. No functional code changes. All changes are cosmetic and correct.",
+    "issues": []
+  },
+  {
+    "file": "README.md",
+    "description": "Comprehensive documentation update reflecting the migration from Oracle to Azure SQL Database. Updated technology stack, setup instructions, database schema types, troubleshooting guide, and project structure. All documentation changes accurately reflect the code changes.",
+    "issues": []
+  }
+]

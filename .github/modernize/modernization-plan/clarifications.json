@@ -1,0 +1,10 @@
+[
+  {
+    "question": "Which Azure compute service do you want to deploy to? Options: Azure App Service (simplest, recommended for web apps), Azure Container Apps (serverless containers), or Azure Kubernetes Service (full Kubernetes orchestration).",
+    "answer": "Container app"
+  },
+  {
+    "question": "The application currently uses Oracle DB with Oracle-specific native SQL queries (ROWNUM, TO_CHAR, NVL, analytical functions). The existing Azure profile uses H2 in Oracle-compatibility mode as a workaround. Would you like to migrate the database to an Azure-managed database service (e.g., Azure Database for PostgreSQL) for production use, or continue with the current H2-based Azure profile?",
+    "answer": "to Azure SQL is enough"
+  }
+]

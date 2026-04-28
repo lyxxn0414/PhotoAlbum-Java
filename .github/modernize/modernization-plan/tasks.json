@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Tasks template for modernization plan. Generated alongside plan.md to track individual migration tasks.",
+  "tasks": [
+    {
+      "type": "transform",
+      "id": "001-transform-oracle-to-azure-sql",
+      "description": "Migrate Oracle DB code to Azure SQL Database",
+      "reason": "The application uses Oracle-specific native SQL queries (ROWNUM, TO_CHAR, NVL, analytical functions), Oracle JDBC driver, and Oracle Hibernate dialect. These must be rewritten to be compatible with Azure SQL Database.",
+      "requirements": "Migrate the PhotoAlbum application database layer from Oracle DB to Azure SQL Database. Rewrite all Oracle-specific native SQL queries in PhotoRepository to use Azure SQL Database compatible syntax (replace ROWNUM with OFFSET/FETCH, TO_CHAR with FORMAT/CONVERT, NVL with ISNULL/COALESCE). Update JPA/Hibernate dialect from OracleDialect to SQLServerDialect. Replace the Oracle JDBC driver (ojdbc11) with the Microsoft JDBC Driver for SQL Server (mssql-jdbc) in pom.xml. Update application properties for Azure SQL Database connection. Update the Photo entity column definitions to use Azure SQL Database compatible types (e.g., replace NUMBER(19,0) with BIGINT, replace Oracle-specific TIMESTAMP defaults).",
+      "dependencies": [],
+      "status": "success",
+      "taskSummary": "Successfully migrated Oracle DB to Azure SQL Database. Replaced ojdbc11 with mssql-jdbc, rewrote 5 native SQL queries (ROWNUM→OFFSET/FETCH, NVL→ISNULL, TO_CHAR→YEAR/MONTH), changed Hibernate dialect to SQLServerDialect, updated entity column types, updated all 4 properties files, migrated Docker Compose from Oracle to Azure SQL Edge, and updated all Oracle references in source/config/docs. Build passes and all unit tests pass.",
+      "successCriteria": {
+        "passBuild": "true",
+        "generateNewUnitTests": "false",
+        "passUnitTests": "true"
+      },
+      "successCriteriaStatus": {
+        "passBuild": "true",
+        "generateNewUnitTests": "false",
+        "passUnitTests": "true"
+      }
+    },
+    {
+      "type": "transform",
+      "id": "002-transform-mi-azure-sql",
+      "description": "Configure Managed Identity for Azure SQL Database",
+      "reason": "The application currently uses password-based authentication for database connectivity. Managed Identity provides secure, credential-free authentication to Azure SQL Database, eliminating the need to store database passwords in configuration.",
+      "requirements": "Configure Managed Identity authentication for the PhotoAlbum application to connect to Azure SQL Database securely without passwords. Replace password-based JDBC connection with Managed Identity-based authentication.",
+      "dependencies": [
+        "001-transform-oracle-to-azure-sql"
+      ],
+      "status": "success",
+      "taskSummary": "Successfully configured Managed Identity for Azure SQL Database. Added spring-cloud-azure-dependencies BOM (v5.22.0) and spring-cloud-azure-starter. Updated JDBC URL with ActiveDirectoryMSI authentication. Default and Azure profiles use MI with environment variables. Docker profile retains password auth for local dev. Test profile uses H2 with MI disabled. Build passes and all unit tests pass.",
+      "skills": [
+        {
+          "name": "migration-mi-azure-sql",
+          "location": "builtin"
+        }
+      ],
+      "successCriteria": {
+        "passBuild": "true",
+        "generateNewUnitTests": "false",
+        "passUnitTests": "true"
+      },
+      "successCriteriaStatus": {
+        "passBuild": "true",
+        "generateNewUnitTests": "false",
+        "passUnitTests": "true"
+      }
+    },
+    {
+      "type": "deployment",
+      "id": "003-deployment-containerapp",
+      "description": "Deploy the PhotoAlbum application to Azure Container Apps",
+      "reason": "The user requested deployment to Azure Container Apps, which provides a serverless container hosting platform with built-in scaling, managed ingress, and integration with Azure services.",
+      "requirements": "Deploy the PhotoAlbum Spring Boot application to Azure Container Apps. Use the existing Dockerfile for containerization. Configure the application with the correct Spring profile and Azure SQL Database connection. Ensure the application is accessible via a public endpoint on Azure Container Apps.",
+      "dependencies": [
+        "001-transform-oracle-to-azure-sql",
+        "002-transform-mi-azure-sql"
+      ],
+      "status": "started",
+      "targetAzureService": "Azure Container Apps",
+      "resourceStatus": "create new service",
+      "deploymentTool": "bicep",
+      "skills": [
+        {
+          "name": "azcli-containerapp-deploy",
+          "location": "builtin"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "planName": "modernization-plan",
+    "projectName": "PhotoAlbum-Java",
+    "language": "java",
+    "createdAt": "2026-04-28T04:51:37.325Z",
+    "version": "1.0"
+  }
+}

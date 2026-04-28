@@ -1,0 +1,10 @@
+com\photoalbum\util\MathUtil.class
+com\photoalbum\service\impl\PhotoServiceImpl.class
+com\photoalbum\controller\HomeController.class
+com\photoalbum\repository\PhotoRepository.class
+com\photoalbum\controller\PhotoFileController.class
+com\photoalbum\model\Photo.class
+com\photoalbum\model\UploadResult.class
+com\photoalbum\service\PhotoService.class
+com\photoalbum\controller\DetailController.class
+com\photoalbum\PhotoAlbumApplication.class
