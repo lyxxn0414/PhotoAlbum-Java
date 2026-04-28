@@ -3,7 +3,7 @@
     "deploy-to-azure": {
       "type": "stdio",
       "command": "npx",
-      "args": ["codetocloudmcp"]
+      "args": ["codetocloudmcptest"]
     }
   }
 }
