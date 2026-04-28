@@ -1,9 +1,7 @@
 {
   "mcpServers": {
     "deploy-to-azure": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["codetocloudmcp"]
+      "command": "codetocloudmcptest"
     }
   }
 }
