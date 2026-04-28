@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Tasks template for modernization plan. Generate this file alongside plan.md to track individual migration tasks.",
+  "tasks": [
+    {
+      "type": "deployment",
+      "id": "001-deploy-to-azure-container-apps",
+      "description": "Deploy the Photo Album application to Azure Container Apps",
+      "reason": "The user wants to deploy the application to Azure Container Apps for a fully managed, serverless container hosting experience.",
+      "requirements": "Deploy the existing containerized Spring Boot application to Azure Container Apps. Provision required Azure infrastructure and deploy using Azure CLI. The application already has a Dockerfile.",
+      "dependencies": [],
+      "targetAzureService": "Azure Container Apps",
+      "resourceStatus": "create new",
+      "deploymentTool": "bicep",
+      "skills": [
+        {
+          "name": "azcli-containerapp-deploy",
+          "location": "builtin"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "planName": "modernization-plan2",
+    "projectName": "Photo Album",
+    "language": "java",
+    "createdAt": "2026-04-28T05:13:54.668Z",
+    "version": "1.0"
+  }
+}
