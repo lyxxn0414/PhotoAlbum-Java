@@ -104,6 +104,7 @@ module containerApp 'modules/containerApp.bicep' = {
     imageTag: imageTag
     managedIdentityId: managedIdentity.outputs.id
     managedIdentityClientId: managedIdentity.outputs.clientId
+    managedIdentityPrincipalId: managedIdentity.outputs.principalId
     sqlServerFqdn: sqlServer.outputs.fullyQualifiedDomainName
     sqlDatabaseName: sqlDatabaseName
     tags: {

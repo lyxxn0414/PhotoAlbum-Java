@@ -15,12 +15,7 @@
       "value": "sqladmin"
     },
     "sqlAdminPassword": {
-      "reference": {
-        "keyVault": {
-          "id": ""
-        },
-        "secretName": "sql-admin-password"
-      }
+      "value": ""
     },
     "imageTag": {
       "value": "latest"

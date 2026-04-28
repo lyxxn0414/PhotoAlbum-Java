@@ -22,6 +22,9 @@ param managedIdentityId string
 @description('User-assigned managed identity client ID')
 param managedIdentityClientId string
 
+@description('User-assigned managed identity principal ID (for AcrPull role)')
+param managedIdentityPrincipalId string
+
 @description('Azure SQL Server FQDN')
 param sqlServerFqdn string
 
@@ -143,7 +146,7 @@ resource acrPullRoleAssignment 'Microsoft.Authorization/roleAssignments@2022-04-
   scope: acr
   properties: {
     roleDefinitionId: subscriptionResourceId('Microsoft.Authorization/roleDefinitions', '7f951dda-4ed3-4680-a7ca-43fe172d538d')
-    principalId: reference(managedIdentityId, '2023-01-31', 'Full').properties.principalId
+    principalId: managedIdentityPrincipalId
     principalType: 'ServicePrincipal'
   }
 }

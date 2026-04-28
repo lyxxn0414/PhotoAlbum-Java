@@ -19,6 +19,8 @@ if [[ -z "$SQL_ADMIN_PASSWORD" ]]; then
   exit 1
 fi
 
+command -v python3 >/dev/null 2>&1 || { echo "ERROR: python3 is required but not installed." >&2; exit 1; }
+
 echo "=== Photo Album – Azure Container Apps Deployment ==="
 echo "Resource Group : $RESOURCE_GROUP"
 echo "Location       : $LOCATION"
@@ -63,7 +65,15 @@ echo "      Container App  : $CONTAINER_APP_NAME"
 
 # ── Step 4 – Build and push image to ACR ──────────────────────────────────────
 echo "[4/7] Building and pushing Docker image to ACR..."
-REPO_ROOT="$(git -C "$SCRIPT_DIR" rev-parse --show-toplevel 2>/dev/null || echo "$SCRIPT_DIR/../../../../..")"
+# Locate repo root by searching upward for Dockerfile
+REPO_ROOT="$SCRIPT_DIR"
+while [[ "$REPO_ROOT" != "/" && ! -f "$REPO_ROOT/Dockerfile" ]]; do
+  REPO_ROOT="$(dirname "$REPO_ROOT")"
+done
+if [[ ! -f "$REPO_ROOT/Dockerfile" ]]; then
+  echo "ERROR: Could not find Dockerfile from $SCRIPT_DIR upward." >&2
+  exit 1
+fi
 az acr build \
   --registry "$ACR_NAME" \
   --resource-group "$RESOURCE_GROUP" \

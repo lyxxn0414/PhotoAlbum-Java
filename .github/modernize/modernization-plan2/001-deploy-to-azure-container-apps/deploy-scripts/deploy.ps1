@@ -54,7 +54,15 @@ Write-Host "      Container App  : $ContainerAppName"
 
 # ── Step 4 – Build and push image ─────────────────────────────────────────────
 Write-Host "[4/7] Building and pushing Docker image to ACR..." -ForegroundColor Yellow
-$RepoRoot = (git -C $ScriptDir rev-parse --show-toplevel 2>$null) ?? (Resolve-Path "$ScriptDir\..\..\..\..\..").Path
+# Locate repo root by searching upward for Dockerfile
+$RepoRoot = $ScriptDir
+while ($RepoRoot -ne [System.IO.Path]::GetPathRoot($RepoRoot) -and -not (Test-Path "$RepoRoot\Dockerfile")) {
+    $RepoRoot = Split-Path -Parent $RepoRoot
+}
+if (-not (Test-Path "$RepoRoot\Dockerfile")) {
+    Write-Error "Could not find Dockerfile from $ScriptDir upward."
+    exit 1
+}
 az acr build `
   --registry $AcrName `
   --resource-group $ResourceGroup `
