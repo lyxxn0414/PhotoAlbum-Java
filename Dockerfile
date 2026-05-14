@@ -27,5 +27,5 @@ EXPOSE 8080
 # Set JVM options for container environment
 ENV JAVA_OPTS="-Xmx512m -Xms256m"
 
-# Run the application
-ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar app.jar"]
+# Run the application (Railway provides PORT env variable)
+ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -Dserver.port=${PORT:-8080} -jar app.jar"]
